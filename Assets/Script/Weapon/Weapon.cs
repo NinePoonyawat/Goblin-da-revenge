@@ -11,6 +11,7 @@ public abstract class Weapon : ScriptableObject
     public float cooldownTime = 1.0f;
 
     [SerializeField]
+    [field: TextArea]
     public string description;
 
     // Start is called before the first frame update

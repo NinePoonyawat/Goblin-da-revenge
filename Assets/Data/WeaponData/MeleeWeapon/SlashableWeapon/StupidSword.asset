@@ -15,5 +15,5 @@ MonoBehaviour:
   weaponName: Stupid Sword
   damage: 10
   cooldownTime: 1
-  isOnCooldown: 1
-  description: Unless this sword look stupid, but we should fight!, fight!, tatakae!!
+  description: Unless this sword look stupid, but we must use it to fight! for goblin
+    future! tatakae! tatakae!!
