@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Stupid Sword
   damage: 10
+  cooldownTime: 1
+  isOnCooldown: 1
+  description: Unless this sword look stupid, but we should fight!, fight!, tatakae!!

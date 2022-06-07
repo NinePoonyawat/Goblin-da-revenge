@@ -133,8 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 178019274}
   - component: {fileID: 178019273}
-  - component: {fileID: 178019277}
-  - component: {fileID: 178019276}
+  - component: {fileID: 178019279}
+  - component: {fileID: 178019280}
+  - component: {fileID: 178019278}
   - component: {fileID: 178019275}
   - component: {fileID: 178019272}
   m_Layer: 0
@@ -233,7 +234,9 @@ Transform:
   m_LocalPosition: {x: -3.54, y: 0.9, z: 0}
   m_LocalScale: {x: 0.1528, y: 0.1528, z: 0.1528}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 406829248}
+  - {fileID: 555420217}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -258,7 +261,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &178019276
+--- !u!114 &178019278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,11 +270,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 178019271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e71f6abdd3b597d4e831d726f698c4bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 328f3658d62b5f04d89761d26c4a1c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &178019277
+  controller: {fileID: 178019279}
+  runSpeed: 40
+--- !u!114 &178019279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,10 +284,95 @@ MonoBehaviour:
   m_GameObject: {fileID: 178019271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 957aed66a12f56f4f8fc82c06ab576d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 907b00509c4429640aad1f0db4f8fd16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 1500
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  m_GroundCheck: {fileID: 406829248}
+  m_CeilingCheck: {fileID: 555420217}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &178019280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178019271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fddf232de8c4f8443abd7058b73e5887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInHand: {fileID: 11400000, guid: 2b3bb80fde121334a8c1689e62a83105, type: 2}
+--- !u!1 &406829247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406829248}
+  m_Layer: 0
+  m_Name: FeetPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406829248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406829247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: -5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 178019274}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &555420216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555420217}
+  m_Layer: 0
+  m_Name: HeadPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555420217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555420216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.14, y: 4.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 178019274}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1435559414
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +385,7 @@ GameObject:
   - component: {fileID: 1435559417}
   - component: {fileID: 1435559416}
   - component: {fileID: 1435559415}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
