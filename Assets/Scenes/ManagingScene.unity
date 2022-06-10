@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 178019278}
   - component: {fileID: 178019275}
   - component: {fileID: 178019281}
+  - component: {fileID: 178019282}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -360,9 +361,9 @@ SpriteRenderer:
   m_SortingLayerID: -1277184013
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 967b37276384c8044a6227ccc71246d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1eddeeab0cb313943a3b9afc6fa17489, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 14.79, y: 11.09}
@@ -379,8 +380,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178019271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.53, y: 1.24, z: 0}
-  m_LocalScale: {x: 0.1528, y: 0.1528, z: 0.1528}
+  m_LocalPosition: {x: -3.778, y: 0.896, z: 0}
+  m_LocalScale: {x: 0.090365924, y: 0.086637594, z: 0.1528}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 406829248}
@@ -402,7 +403,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 2.3923743
+  m_Mass: 1.5192032
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 10
@@ -461,9 +462,29 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019877058, y: -0.44881907}
-  m_Size: {x: 7.9202747, y: 14.636962}
+  m_Offset: {x: 0.44221425, y: -0.008303879}
+  m_Size: {x: 11.298991, y: 19.702879}
   m_Direction: 0
+--- !u!95 &178019282
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178019271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9dd44ec3daf93444e806806e4542a171, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &406829247
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406829247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -7.33, z: 0}
+  m_LocalPosition: {x: -0.07, y: -9.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -519,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555420216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 6.7, z: 0}
+  m_LocalPosition: {x: -0.14, y: 9.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
