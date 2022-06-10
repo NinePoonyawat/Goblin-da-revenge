@@ -7,8 +7,13 @@ public abstract class Weapon : ScriptableObject
 {
     public string weaponName;
     public float damage;
-    
     public float cooldownTime = 1.0f;
+
+    [SerializeField]
+    public Sprite image;
+
+    public float width;
+    public float height;
 
     [SerializeField]
     [field: TextArea]

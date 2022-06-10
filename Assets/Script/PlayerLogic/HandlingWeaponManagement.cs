@@ -7,8 +7,17 @@ public class HandlingWeaponManagement : MonoBehaviour
     [SerializeField]
     public Weapon weaponInHand;
 
+    [SerializeField]
+    public Transform whereIsHand;
+
     private float attackCooldownCount = .0f;
     private bool isOnAttackCooldown = false;
+
+    void Start()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;
+        gameObject.GetComponent<SpriteRenderer>().size = new Vector2(weaponInHand.width,weaponInHand.height);
+    }
 
     void Update()
     {
