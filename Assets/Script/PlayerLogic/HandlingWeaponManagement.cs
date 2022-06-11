@@ -17,6 +17,7 @@ public class HandlingWeaponManagement : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;
         gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size,weaponInHand.size,1);
+        gameObject.GetComponent<Transform>().localPosition = weaponInHand.pickPosition;
     }
 
     void Update()

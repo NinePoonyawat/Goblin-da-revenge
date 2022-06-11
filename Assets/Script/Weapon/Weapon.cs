@@ -13,6 +13,7 @@ public abstract class Weapon : ScriptableObject
     public Sprite image;
 
     public float size = 1;
+    public Vector3 pickPosition;
 
     [SerializeField]
     [field: TextArea]
