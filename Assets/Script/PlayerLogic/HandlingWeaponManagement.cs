@@ -16,7 +16,7 @@ public class HandlingWeaponManagement : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;
-        gameObject.GetComponent<SpriteRenderer>().size = new Vector2(weaponInHand.width,weaponInHand.height);
+        gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size,weaponInHand.size,1);
     }
 
     void Update()

@@ -16,7 +16,6 @@ MonoBehaviour:
   damage: 7
   cooldownTime: 0.8
   image: {fileID: 21300000, guid: 114663e708c28e4428fd0fdeca7a9d46, type: 3}
-  width: 300
-  height: 100
+  size: 10
   description: '"My soldier, rage! My soldiers, scream! My soldiers, fight!" Gobwin
     Smash, goblin commander.'

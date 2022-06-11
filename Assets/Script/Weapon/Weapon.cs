@@ -12,8 +12,7 @@ public abstract class Weapon : ScriptableObject
     [SerializeField]
     public Sprite image;
 
-    public float width;
-    public float height;
+    public float size = 1;
 
     [SerializeField]
     [field: TextArea]
