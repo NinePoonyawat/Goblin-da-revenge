@@ -10,44 +10,61 @@ public class EnemyBehavier : MonoBehaviour
 
     private IEnumerator coroutine;
     
+    public Rigidbody2D rb;
     [SerializeField] private Transform target;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
 
     public bool isFacingRight = false;
     public bool isMoving = false;
+    public bool isForward = false;
 
     void Start()
     {
-        StartCoroutine(fleeState());
+        StartCoroutine(aggroState());
     }
 
     void Update()
     {
-        if (isMoving) {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, - stalkSpeed * Time.deltaTime);
+        if (isMoving && isForward) {
+            rb.velocity = new Vector2(-100 * stalkSpeed * Time.deltaTime, 0f);
             distance = Vector3.Distance(target.position, transform.position);
-
-            if(isFacingRight && target.position.x > transform.position.x) {
-                isFacingRight = false;
-                transform.Rotate(0f, 180f, 0f);
-            }
-            if(!isFacingRight && target.position.x < transform.position.x) {
-                isFacingRight = true;
-                transform.Rotate(0f, 180f, 0f);
-            }
         }
+        if (isMoving && !isForward) {
+            rb.velocity = new Vector2(100 * stalkSpeed * Time.deltaTime, 0f);
+            distance = Vector3.Distance(target.position, transform.position);
+        }
+        
+        if (isFacingRight && target.position.x > transform.position.x) {
+            isFacingRight = false;
+            transform.Rotate(0f, 180f, 0f);
+        }
+        if (!isFacingRight && target.position.x < transform.position.x) {
+            isFacingRight = true;
+            transform.Rotate(0f, 180f, 0f);
+        }
+        
+        if (distance < 2.5) StartCoroutine(attackingState());
     }
 
     IEnumerator fleeState()
     {
         isMoving = true;
-
-        yield return new WaitForSeconds(2f);
-        yield return StartCoroutine(fireState());
+        isForward = false;
+        
+        yield return new WaitForSeconds(3f);
+        yield return StartCoroutine(aggroState());
     }
 
-    IEnumerator fireState()
+    IEnumerator aggroState()
+    {
+        isMoving = true;
+        isForward = true;
+
+        yield return null;
+    }
+
+    IEnumerator attackingState()
     {
         isMoving = false;
         Shoot();
