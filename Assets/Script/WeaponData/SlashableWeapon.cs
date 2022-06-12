@@ -5,6 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Weapon/MeleeWeapon/SlashableWeapon")]
 public class SlashableWeapon : MeleeWeapon
 {
+
+    void Start()
+    {
+    }
+
     public override void attack()
     {
         Debug.Log("attack!!! tatakae!!!!");
@@ -16,4 +21,5 @@ public class SlashableWeapon : MeleeWeapon
             Debug.Log("We hit" + enemy);
         }
     }
+
 }
