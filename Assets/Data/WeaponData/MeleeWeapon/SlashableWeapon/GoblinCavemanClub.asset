@@ -22,7 +22,7 @@ MonoBehaviour:
   description: '"My soldier, rage! My soldiers, scream! My soldiers, fight!" Gobwin
     Smash, goblin commander.'
   attackPos: {x: 0.5, y: 0, z: 0}
-  attackRange: 1
+  attackRange: 2
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
