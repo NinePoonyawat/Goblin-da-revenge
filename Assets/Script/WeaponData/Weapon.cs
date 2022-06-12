@@ -5,10 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public abstract class Weapon : ScriptableObject
 {
+    public GameObject weaponPrefab;
+
     public string weaponName;
     public float damage;
     public float cooldownTime = 1.0f;
-    public Vector3 attackPos;
 
     [SerializeField]
     public Sprite image;
@@ -22,5 +23,9 @@ public abstract class Weapon : ScriptableObject
 
     // Start is called before the first frame update
     public abstract void attack();
+
+    public virtual void initialize()
+    {
+    }
 
 }
