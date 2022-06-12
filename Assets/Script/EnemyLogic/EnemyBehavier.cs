@@ -43,8 +43,6 @@ public class EnemyBehavier : MonoBehaviour
             isFacingRight = true;
             transform.Rotate(0f, 180f, 0f);
         }
-        
-        if (distance < 2.5) StartCoroutine(attackingState());
     }
 
     IEnumerator fleeState()
