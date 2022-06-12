@@ -21,8 +21,8 @@ MonoBehaviour:
   pickPosition: {x: 6, y: 0, z: 0}
   description: '"My soldier, rage! My soldiers, scream! My soldiers, fight!" Gobwin
     Smash, goblin commander.'
-  attackPos: {x: 1, y: 0, z: 0}
-  attackRange: 0.5
+  attackPos: {x: 0.5, y: 0, z: 0}
+  attackRange: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
