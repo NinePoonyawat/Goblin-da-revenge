@@ -10,13 +10,15 @@ public class HandlingWeaponManagement : MonoBehaviour
     [SerializeField]
     public Transform whereIsHand;
 
+    public bool isPlayerControl = false;
+
     private float attackCooldownCount = .0f;
     private bool isOnAttackCooldown = false;
 
     void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;
-        gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size,weaponInHand.size,1);
+        gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size, weaponInHand.size, 1);
         gameObject.GetComponent<Transform>().localPosition = weaponInHand.pickPosition;
 
         weaponInHand.initialize();
@@ -30,11 +32,14 @@ public class HandlingWeaponManagement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
+        if (isPlayerControl)
         {
-            weaponInHand.attack();
-            attackCooldownCount = weaponInHand.cooldownTime;
-            isOnAttackCooldown = true;
+            if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
+            {
+                weaponInHand.attack("Enemy");
+                attackCooldownCount = weaponInHand.cooldownTime;
+                isOnAttackCooldown = true;
+            }
         }
     }
 

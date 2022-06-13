@@ -23,7 +23,7 @@ public abstract class Weapon : ScriptableObject
     public string description;
 
     // Start is called before the first frame update
-    public abstract void attack();
+    public abstract void attack(string entityToAttack);
 
     public virtual void initializeWeaponObject(GameObject GO)
     {

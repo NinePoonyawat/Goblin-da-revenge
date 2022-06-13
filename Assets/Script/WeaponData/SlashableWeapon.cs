@@ -10,15 +10,18 @@ public class SlashableWeapon : MeleeWeapon
 
     }
 
-    public override void attack()
+    public override void attack(string entityToAttack)
     {
         Debug.Log("attack!!! tatakae!!!!");
         
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach(Collider2D entity in hitEnemies)
         {
-            Debug.Log("We hit" + enemy.name);
+            if (entity.CompareTag(entityToAttack))
+            {
+                Debug.Log("We hit" + entity.name);
+            }
         }
     }
 
