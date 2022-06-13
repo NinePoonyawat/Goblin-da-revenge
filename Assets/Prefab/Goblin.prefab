@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2008518737774560499}
   - component: {fileID: 2008518737774560496}
-  - component: {fileID: 2008518737774560502}
-  - component: {fileID: 2008518737774560503}
   - component: {fileID: 2008518737774560498}
   - component: {fileID: 2008518737774560488}
   - component: {fileID: 2008518737774560491}
   - component: {fileID: 396659784867990807}
+  - component: {fileID: 2008518737774560502}
+  - component: {fileID: 2008518737774560503}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Player
@@ -93,43 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2008518737774560502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008518737774560510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907b00509c4429640aad1f0db4f8fd16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 1500
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  m_GroundCheck: {fileID: 2008518738070415353}
-  m_CeilingCheck: {fileID: 2008518738453959936}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &2008518737774560503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008518737774560510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328f3658d62b5f04d89761d26c4a1c25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 2008518737774560502}
-  runSpeed: 40
 --- !u!50 &2008518737774560498
 Rigidbody2D:
   serializedVersion: 4
@@ -202,6 +165,43 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+--- !u!114 &2008518737774560502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008518737774560510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907b00509c4429640aad1f0db4f8fd16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 1500
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  m_GroundCheck: {fileID: 2008518738070415353}
+  m_CeilingCheck: {fileID: 2008518738453959936}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2008518737774560503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008518737774560510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328f3658d62b5f04d89761d26c4a1c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 2008518737774560502}
+  runSpeed: 40
 --- !u!1 &2008518738070415238
 GameObject:
   m_ObjectHideFlags: 0
