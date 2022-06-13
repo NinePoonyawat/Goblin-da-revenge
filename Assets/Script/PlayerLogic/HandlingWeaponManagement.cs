@@ -10,17 +10,10 @@ public class HandlingWeaponManagement : MonoBehaviour
     [SerializeField]
     public Transform whereIsHand;
 
-    public bool isPlayerControl = false;
+    protected float attackCooldownCount = .0f;
+    protected bool isOnAttackCooldown = false;
 
-    [SerializeField]
-    public GameObject playerToDetected;
-    private Transform playerTransform;
-    private Transform thisTransform;
-
-    private float attackCooldownCount = .0f;
-    private bool isOnAttackCooldown = false;
-
-    void Start()
+    protected virtual void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;
         gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size, weaponInHand.size, 1);
@@ -39,33 +32,33 @@ public class HandlingWeaponManagement : MonoBehaviour
 
         weaponInHand.initializeWeaponObject(GO);
 
-        if (!isPlayerControl)
-        {
-            playerTransform = playerToDetected.GetComponent<Transform>();
-            thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
-        }
+        // if (!isPlayerControl)
+        // {
+        //     playerTransform = playerToDetected.GetComponent<Transform>();
+        //     thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
+        // }
     }
 
     void Update()
     {
-        if (isPlayerControl)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
-            {
-                weaponInHand.attack("Enemy");
-                attackCooldownCount = weaponInHand.cooldownTime;
-                isOnAttackCooldown = true;
-            }
-        }
-        else
-        {
-            if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange && !isOnAttackCooldown)
-            {
-                weaponInHand.attack("Player");
-                attackCooldownCount = weaponInHand.cooldownTime;
-                isOnAttackCooldown = true;
-            }
-        }
+        // if (isPlayerControl)
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
+        //     {
+        //         weaponInHand.attack("Enemy");
+        //         attackCooldownCount = weaponInHand.cooldownTime;
+        //         isOnAttackCooldown = true;
+        //     }
+        // }
+        // else
+        // {
+        //     if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange && !isOnAttackCooldown)
+        //     {
+        //         weaponInHand.attack("Player");
+        //         attackCooldownCount = weaponInHand.cooldownTime;
+        //         isOnAttackCooldown = true;
+        //     }
+        // }
     }
 
     void FixedUpdate()
