@@ -15,5 +15,15 @@ public class StatManagement : MonoBehaviour
     public virtual void takeDamage(int damage)
     {
         currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            die();
+        }
+    }
+
+    public virtual void die()
+    {
+        Destroy(gameObject);
     }
 }
