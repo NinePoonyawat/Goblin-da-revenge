@@ -5,7 +5,6 @@ using UnityEngine;
 //[CreateAssetMenu]//(menuName = "Weapon/MeleeWeapon")]
 public abstract class MeleeWeapon : Weapon
 {
-    public Vector3 attackPos;
     protected Transform attackPoint;
 
     public float attackRange = 0.5f;
@@ -19,5 +18,7 @@ public abstract class MeleeWeapon : Weapon
     {
         base.initializeWeaponObject(GO);
         attackPoint = weaponObject.transform.GetChild(0).GetComponent<Transform>();
+        detectedRange = Vector3.Distance(attackPoint.position,weaponObject.transform.GetComponent<Transform>().position);
+        Debug.Log(detectedRange);
     }
 }

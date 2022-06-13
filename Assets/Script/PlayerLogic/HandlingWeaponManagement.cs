@@ -12,6 +12,11 @@ public class HandlingWeaponManagement : MonoBehaviour
 
     public bool isPlayerControl = false;
 
+    [SerializeField]
+    public GameObject playerToDetected;
+    private Transform playerTransform;
+    private Transform thisTransform;
+
     private float attackCooldownCount = .0f;
     private bool isOnAttackCooldown = false;
 
@@ -27,7 +32,18 @@ public class HandlingWeaponManagement : MonoBehaviour
         GO.transform.SetParent(this.transform);
         GO.GetComponent<Transform>().localPosition = Vector3.zero;
 
+        if (gameObject.transform.parent.parent.gameObject.GetComponent<SpriteRenderer>().flipX)
+        {
+            GO.transform.Rotate(0, 180, 0);
+        }
+
         weaponInHand.initializeWeaponObject(GO);
+
+        if (!isPlayerControl)
+        {
+            playerTransform = playerToDetected.GetComponent<Transform>();
+            thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
+        }
     }
 
     void Update()
@@ -37,6 +53,15 @@ public class HandlingWeaponManagement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
             {
                 weaponInHand.attack("Enemy");
+                attackCooldownCount = weaponInHand.cooldownTime;
+                isOnAttackCooldown = true;
+            }
+        }
+        else
+        {
+            if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange && !isOnAttackCooldown)
+            {
+                weaponInHand.attack("Player");
                 attackCooldownCount = weaponInHand.cooldownTime;
                 isOnAttackCooldown = true;
             }
