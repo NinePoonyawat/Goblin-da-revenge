@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2008518737774560498}
   - component: {fileID: 2008518737774560488}
   - component: {fileID: 2008518737774560491}
+  - component: {fileID: 396659784867990807}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Player
@@ -186,6 +187,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &396659784867990807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008518737774560510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95306179675b7dd42937caf41f456762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!1 &2008518738070415238
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +307,7 @@ GameObject:
   - component: {fileID: 2008518739371538027}
   - component: {fileID: 2008518739371538029}
   - component: {fileID: 2008518739371538026}
+  - component: {fileID: 6709682679894119353}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -320,14 +337,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008518739371538024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fddf232de8c4f8443abd7058b73e5887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponInHand: {fileID: 11400000, guid: 093c023af77a27f418052d55d0a7d179, type: 2}
   whereIsHand: {fileID: 2008518738786110798}
-  isPlayerControl: 1
 --- !u!212 &2008518739371538026
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -380,3 +396,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6709682679894119353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008518739371538024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b708388ad73efc48add717dba6a8d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponInHand: {fileID: 11400000, guid: 093c023af77a27f418052d55d0a7d179, type: 2}
+  whereIsHand: {fileID: 2008518738786110798}

@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class StatManagement : MonoBehaviour
+{
+    public int maxHealth;
+    public int currentHealth;
+
+    protected virtual void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
+    protected virtual void takeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+}
