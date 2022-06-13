@@ -6,6 +6,7 @@ using UnityEngine;
 public abstract class Weapon : ScriptableObject
 {
     public GameObject weaponPrefab;
+    protected GameObject weaponObject;
 
     public string weaponName;
     public float damage;
@@ -23,6 +24,11 @@ public abstract class Weapon : ScriptableObject
 
     // Start is called before the first frame update
     public abstract void attack();
+
+    public virtual void initializeWeaponObject(GameObject GO)
+    {
+        weaponObject = GO;
+    }
 
     public virtual void initialize()
     {

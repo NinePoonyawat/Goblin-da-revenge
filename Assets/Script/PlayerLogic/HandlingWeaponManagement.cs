@@ -24,6 +24,8 @@ public class HandlingWeaponManagement : MonoBehaviour
         GameObject GO = Instantiate(weaponInHand.weaponPrefab) as GameObject;
         GO.transform.SetParent(this.transform);
         GO.GetComponent<Transform>().localPosition = Vector3.zero;
+
+        weaponInHand.initializeWeaponObject(GO);
     }
 
     void Update()

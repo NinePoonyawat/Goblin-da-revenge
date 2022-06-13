@@ -6,13 +6,18 @@ using UnityEngine;
 public abstract class MeleeWeapon : Weapon
 {
     public Vector3 attackPos;
-    private Transform attackPoint;
+    protected Transform attackPoint;
 
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
     public override void initialize()
     {
-        weaponPrefab.transform.GetChild(0).GetComponent<Transform>().position = attackPos;
+    }
+
+    public override void initializeWeaponObject(GameObject GO)
+    {
+        base.initializeWeaponObject(GO);
+        attackPoint = weaponObject.transform.GetChild(0).GetComponent<Transform>();
     }
 }
