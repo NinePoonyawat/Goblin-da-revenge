@@ -61,13 +61,13 @@ public class HandlingWeaponManagement : MonoBehaviour
         // }
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (attackCooldownCount > 0)
         {
             attackCooldownCount -= Time.deltaTime;
         }
-        if (attackCooldownCount <= 0)
+        if (attackCooldownCount <= 0 && isOnAttackCooldown)
         {
             isOnAttackCooldown = false;
         }
