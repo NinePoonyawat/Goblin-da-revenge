@@ -12,7 +12,7 @@ public class StatManagement : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    protected virtual void takeDamage(int damage)
+    public virtual void takeDamage(int damage)
     {
         currentHealth -= damage;
     }

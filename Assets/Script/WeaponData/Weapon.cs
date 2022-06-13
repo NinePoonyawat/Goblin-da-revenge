@@ -9,7 +9,7 @@ public abstract class Weapon : ScriptableObject
     protected GameObject weaponObject;
 
     public string weaponName;
-    public float damage;
+    public int damage;
     public float cooldownTime = 1.0f;
 
     [SerializeField]

@@ -13,7 +13,7 @@ public class PlayerStatManagement : StatManagement
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    protected override void takeDamage(int damage)
+    public override void takeDamage(int damage)
     {
         base.takeDamage(damage);
         healthBar.SetHealth(currentHealth);

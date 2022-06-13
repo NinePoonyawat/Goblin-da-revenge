@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class AttackManager : MonoBehaviour
 {
+    public static AttackManager instance {get; private set;}
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if (instance != null & instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void attack(GameObject attackedEntity,int damage)
     {
-        
+        attackedEntity.GetComponent<StatManagement>().takeDamage(damage);
     }
 }
