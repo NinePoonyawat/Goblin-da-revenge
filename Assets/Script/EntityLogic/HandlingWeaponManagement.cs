@@ -10,6 +10,9 @@ public class HandlingWeaponManagement : MonoBehaviour
     [SerializeField]
     public Transform whereIsHand;
 
+    public GameObject GO;
+    public WeaponLogic weaponLogic;
+
     protected float attackCooldownCount = .0f;
     protected bool isOnAttackCooldown = false;
 
@@ -21,7 +24,7 @@ public class HandlingWeaponManagement : MonoBehaviour
 
         weaponInHand.initialize();
 
-        GameObject GO = Instantiate(weaponInHand.weaponPrefab) as GameObject;
+        GO = Instantiate(weaponInHand.weaponPrefab) as GameObject;
         GO.transform.SetParent(this.transform);
         GO.GetComponent<Transform>().localPosition = Vector3.zero;
 
@@ -29,6 +32,8 @@ public class HandlingWeaponManagement : MonoBehaviour
         {
             GO.transform.Rotate(0, 180, 0);
         }
+
+        weaponLogic = GO.GetComponent<WeaponLogic>();
 
         weaponInHand.initializeWeaponObject(GO);
 

@@ -7,6 +7,7 @@ public abstract class Weapon : ScriptableObject
 {
     public GameObject weaponPrefab;
     protected GameObject weaponObject;
+    public WeaponLogic weaponLogic;
 
     public string weaponName;
     public int damage;

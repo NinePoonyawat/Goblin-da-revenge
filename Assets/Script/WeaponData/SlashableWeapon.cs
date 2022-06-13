@@ -16,6 +16,7 @@ public class SlashableWeapon : MeleeWeapon
         
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
+        Debug.Log(attackPoint.position);
         foreach(Collider2D entity in hitEnemies)
         {
             if (entity.CompareTag(entityToAttack))

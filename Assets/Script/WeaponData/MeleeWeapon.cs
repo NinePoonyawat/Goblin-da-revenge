@@ -19,6 +19,5 @@ public abstract class MeleeWeapon : Weapon
         base.initializeWeaponObject(GO);
         attackPoint = weaponObject.transform.GetChild(0).GetComponent<Transform>();
         detectedRange = Vector3.Distance(attackPoint.position,weaponObject.transform.GetComponent<Transform>().position);
-        Debug.Log(detectedRange);
     }
 }

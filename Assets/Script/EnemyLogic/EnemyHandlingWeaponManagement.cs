@@ -38,7 +38,7 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
         {
             if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange)
             {
-                weaponInHand.attack("Player");
+                weaponLogic.attack("Player");
                 attackCooldownCount = weaponInHand.cooldownTime;
                 isOnAttackCooldown = true;
             }

@@ -10,7 +10,7 @@ public class PlayerHandlingWeaponManagement : HandlingWeaponManagement
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
             {
-                weaponInHand.attack("Enemy");
+                weaponLogic.attack("Enemy");
                 attackCooldownCount = weaponInHand.cooldownTime;
                 isOnAttackCooldown = true;
             }
