@@ -23,17 +23,4 @@ public abstract class Weapon : ScriptableObject
     [SerializeField]
     [field: TextArea]
     public string description;
-
-    // Start is called before the first frame update
-    public abstract void attack(string entityToAttack);
-
-    public virtual void initializeWeaponObject(GameObject GO)
-    {
-        weaponObject = GO;
-    }
-
-    public virtual void initialize()
-    {
-    }
-
 }

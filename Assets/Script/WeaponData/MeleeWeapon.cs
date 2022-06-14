@@ -10,14 +10,4 @@ public abstract class MeleeWeapon : Weapon
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
-    public override void initialize()
-    {
-    }
-
-    public override void initializeWeaponObject(GameObject GO)
-    {
-        base.initializeWeaponObject(GO);
-        attackPoint = weaponObject.transform.GetChild(0).GetComponent<Transform>();
-        detectedRange = Vector3.Distance(attackPoint.position,weaponObject.transform.GetComponent<Transform>().position);
-    }
 }

@@ -22,8 +22,6 @@ public class HandlingWeaponManagement : MonoBehaviour
         gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size, weaponInHand.size, 1);
         gameObject.GetComponent<Transform>().localPosition = weaponInHand.pickPosition;
 
-        weaponInHand.initialize();
-
         GO = Instantiate(weaponInHand.weaponPrefab) as GameObject;
         GO.transform.SetParent(this.transform);
         GO.GetComponent<Transform>().localPosition = Vector3.zero;
@@ -34,8 +32,6 @@ public class HandlingWeaponManagement : MonoBehaviour
         }
 
         weaponLogic = GO.GetComponent<WeaponLogic>();
-
-        weaponInHand.initializeWeaponObject(GO);
 
         // if (!isPlayerControl)
         // {
