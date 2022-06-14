@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383455588188459026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.849597, y: 0.66522026, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.974597, y: 0.54022026, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +103,8 @@ MonoBehaviour:
   projectileSpeed: 20
   lifetime: 30
   projectileDamage: 0
-  damage: 0
+  damage: 5
+  entityToAttack: Enemy
 --- !u!50 &1383455588188459030
 Rigidbody2D:
   serializedVersion: 4
@@ -124,7 +125,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!58 &3345478504470374018
 CircleCollider2D:
   m_ObjectHideFlags: 0

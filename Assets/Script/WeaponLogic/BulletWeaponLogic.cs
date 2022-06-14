@@ -20,6 +20,8 @@ public class BulletWeaponLogic : WeaponLogic
         bulletPrefab = ((BulletWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).bulletPrefab;
         damage = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand.damage;
         bulletPrefab.GetComponent<Bullet>().entityToAttack = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().entityToAttack;
+
+        gunPoint.localPosition = ((BulletWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).gunPoint;
     }
 
     public override void attack(string entityToAttack)

@@ -27,7 +27,6 @@ public class SlashableWeaponLogic : WeaponLogic
             if (entity.CompareTag(entityToAttack))
             {
                 entity.GetComponent<StatManagement>().takeDamage(damage);
-                Debug.Log("We hit" + entity.name);
             }
         }
     }
