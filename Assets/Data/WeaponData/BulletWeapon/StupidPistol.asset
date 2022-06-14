@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c09cd30206f50e408597083be9d1627, type: 3}
+  m_Name: StupidPistol
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 4981396875044536270, guid: 751050dd1067b714ab5cdb848cb07a0f, type: 3}
+  weaponLogic: {fileID: 0}
+  weaponName: StupidPistol
+  damage: 5
+  cooldownTime: 0.3
+  image: {fileID: 21300000, guid: 44ec4752918d9aa47bdb539e3708eff9, type: 3}
+  size: 30
+  pickPosition: {x: 3.6, y: 0.6, z: 0}
+  detectedRange: 50
+  description: dunno
+  bulletPrefab: {fileID: 1383455588188459026, guid: 70e5bccf65c064f4b8e72127d214101d, type: 3}
+  gunPoint: {x: 1, y: 0, z: 0}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256

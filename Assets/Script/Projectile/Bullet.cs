@@ -10,11 +10,23 @@ public class Bullet : MonoBehaviour
 
     public int projectileDamage;
 
+    public int damage = 0;
+    public string entityToAttack;
+
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * projectileSpeed;
         StartCoroutine(countdown());
+    }
+
+    void OnTriggerEnter2D(Collider2D entity)
+    {
+        if(entity.CompareTag(entityToAttack))
+        {
+            entity.GetComponent<StatManagement>().takeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

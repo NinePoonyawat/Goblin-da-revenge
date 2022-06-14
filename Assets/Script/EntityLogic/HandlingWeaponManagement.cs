@@ -16,6 +16,8 @@ public class HandlingWeaponManagement : MonoBehaviour
     protected float attackCooldownCount = .0f;
     protected bool isOnAttackCooldown = false;
 
+    public string entityToAttack;
+
     protected virtual void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;

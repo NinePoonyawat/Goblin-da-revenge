@@ -5,9 +5,7 @@ using UnityEngine;
 //[CreateAssetMenu]//(menuName = "Weapon/MeleeWeapon")]
 public abstract class MeleeWeapon : Weapon
 {
-    protected Transform attackPoint;
-
+    public Vector3 attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-
 }

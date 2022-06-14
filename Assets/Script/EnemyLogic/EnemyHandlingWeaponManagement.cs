@@ -20,6 +20,9 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
     protected override void Start()
     {
         base.Start();
+
+        entityToAttack = "Player";
+        
         playerTransform = playerToDetected.GetComponent<Transform>();
         thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
         attackAlert = gameObject.transform.parent.parent.gameObject.transform.Find("AttackAlert").gameObject;

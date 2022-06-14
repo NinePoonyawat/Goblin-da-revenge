@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerHandlingWeaponManagement : HandlingWeaponManagement
 {
 
+    protected override void Start()
+    {
+        base.Start();
+        entityToAttack = "Enemy";
+    }
     // Update is called once per frame
     void Update()
     {
