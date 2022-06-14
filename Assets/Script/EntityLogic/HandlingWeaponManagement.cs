@@ -13,9 +13,6 @@ public class HandlingWeaponManagement : MonoBehaviour
     public GameObject GO;
     public WeaponLogic weaponLogic;
 
-    [SerializeField]
-    public Rigidbody2D entityRb;
-
     protected float attackCooldownCount = .0f;
     protected bool isOnAttackCooldown = false;
 

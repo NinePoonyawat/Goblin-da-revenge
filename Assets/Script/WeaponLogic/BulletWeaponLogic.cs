@@ -11,19 +11,21 @@ public class BulletWeaponLogic : WeaponLogic
 
     public LayerMask entityLayers;
     private int damage;
+    private string entityToAttack;
 
     void Start()
     {
         bulletPrefab = ((BulletWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).bulletPrefab;
         damage = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand.damage;
-        bulletPrefab.GetComponent<Bullet>().entityToAttack = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().entityToAttack;
+        entityToAttack = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().entityToAttack;
 
         gunPoint.localPosition = ((BulletWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).gunPoint;
     }
 
     public override void attack(string entityToAttack)
     {
-        GameObject GO = Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
+        GameObject GO = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);
         GO.GetComponent<Bullet>().damage = damage;
+        GO.GetComponent<Bullet>().entityToAttack = entityToAttack;
     }
 }

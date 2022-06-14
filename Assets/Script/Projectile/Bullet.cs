@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     public string entityToAttack;
 
     // Start is called before the first frame update
-    async void Start()
+    void Start()
     {
         rb.velocity = transform.right * projectileSpeed;
         StartCoroutine(countdown());
@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D entity)
     {
+        Debug.Log(entityToAttack);
         if(entity.CompareTag(entityToAttack))
         {
             entity.GetComponent<StatManagement>().takeDamage(damage);

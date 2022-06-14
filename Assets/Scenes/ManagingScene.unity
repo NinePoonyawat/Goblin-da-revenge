@@ -883,6 +883,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 178019274}
+    - target: {fileID: 9084657536468676683, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: isFacingRight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9084657537371383387, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: entityRb
       value: 
