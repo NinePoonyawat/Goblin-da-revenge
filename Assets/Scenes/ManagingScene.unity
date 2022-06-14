@@ -887,10 +887,18 @@ PrefabInstance:
       propertyPath: isFacingRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9084657536592060099, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9084657537371383387, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: entityRb
       value: 
       objectReference: {fileID: 901582830}
+    - target: {fileID: 9084657537371383387, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: weaponInHand
+      value: 
+      objectReference: {fileID: 11400000, guid: 14c87b46794458347917c4faa1080b93, type: 2}
     - target: {fileID: 9084657537371383387, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: playerToDetected
       value: 
