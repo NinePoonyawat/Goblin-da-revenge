@@ -7,9 +7,6 @@ public class BulletWeaponLogic : WeaponLogic
     [SerializeField]
     private Transform gunPoint;
 
-    [SerializeField]
-    private CharacterController2D characterController;
-
     public GameObject bulletPrefab;
 
     public LayerMask entityLayers;
@@ -26,7 +23,7 @@ public class BulletWeaponLogic : WeaponLogic
 
     public override void attack(string entityToAttack)
     {
-        GameObject GO = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);
+        GameObject GO = Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
         GO.GetComponent<Bullet>().damage = damage;
     }
 }
