@@ -22,6 +22,8 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
         base.Start();
 
         entityToAttack = "Player";
+
+        playerToDetected = GameObject.Find("PlayingGoblin");
         
         playerTransform = playerToDetected.GetComponent<Transform>();
         thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();

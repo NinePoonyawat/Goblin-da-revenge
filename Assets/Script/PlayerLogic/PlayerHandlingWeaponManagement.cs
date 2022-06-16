@@ -8,6 +8,7 @@ public class PlayerHandlingWeaponManagement : HandlingWeaponManagement
     protected override void Start()
     {
         base.Start();
+        Debug.Log(weaponInHand);
         entityToAttack = "Enemy";
     }
     // Update is called once per frame

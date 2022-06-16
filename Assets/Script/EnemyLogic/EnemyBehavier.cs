@@ -21,6 +21,7 @@ public class EnemyBehavier : MonoBehaviour
 
     void Start()
     {
+        target = GameObject.Find("PlayingGoblin").transform.GetComponent<Transform>();
         StartCoroutine(aggroState());
     }
 
