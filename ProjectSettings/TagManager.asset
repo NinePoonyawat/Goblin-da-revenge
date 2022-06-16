@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Building
   - Entity
   - 
   - 
@@ -42,9 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Building
+    uniqueID: 1155274367
+    locked: 0
   - name: Player
     uniqueID: 3017783283
     locked: 0
-  - name: PlayerWeapon
+  - name: Enemy
+    uniqueID: 2935766155
+    locked: 0
+  - name: Weapon
     uniqueID: 4077992489
+    locked: 0
+  - name: UI
+    uniqueID: 2699405449
     locked: 0
