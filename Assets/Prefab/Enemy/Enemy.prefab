@@ -633,11 +633,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9084657536468676677}
+  - component: {fileID: 983417614128689914}
   - component: {fileID: 9084657536468676682}
   - component: {fileID: 9084657536468676683}
   - component: {fileID: 9084657536468676679}
   - component: {fileID: 9084657536468676678}
   - component: {fileID: 1042613926703285891}
+  - component: {fileID: 557802590725028131}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -664,6 +666,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &983417614128689914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084657536468676680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada71eb905d44f44fb40958a8a1c433b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Villager
+  race: 0
 --- !u!212 &9084657536468676682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -789,6 +805,19 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   healthBar: {fileID: 1296526617254807613}
+--- !u!114 &557802590725028131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084657536468676680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68f9e06cebb0b94e9c0b331fb80eadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handlingWeaponManagement: {fileID: 9084657537371383387}
 --- !u!1 &9084657536592060099
 GameObject:
   m_ObjectHideFlags: 0

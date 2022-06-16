@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 983417614128689914, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: enemyName
+      value: Villager
+      objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Villager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
