@@ -16,4 +16,4 @@ MonoBehaviour:
   isInfinite: 0
   cooldown: 3
   speed: 20
-  walkingDamage: 0.01
+  walkingDamage: 0.03
