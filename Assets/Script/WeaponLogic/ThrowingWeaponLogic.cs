@@ -49,6 +49,10 @@ public class ThrowingWeaponLogic : WeaponLogic
         }
         else
         {
+            if (x < y)
+            {
+                x = y;
+            }
             Xvelocity = (float) (x/(Math.Sqrt(2*(y - x))));
             Yvelocity = (float) (x/(Math.Sqrt(2*(y - x))));
         }
