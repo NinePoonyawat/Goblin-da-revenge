@@ -7,9 +7,15 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
 
     public float runSpeed = 40f;
+    private float defaultRunSpeed;
 
     float horizontalMove = 0f;
     bool jump = false;
+
+    void Start()
+    {
+        defaultRunSpeed = runSpeed;
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,4 +33,14 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalMove * Time.deltaTime,false,jump);
         jump = false;
     }
+
+    public void setRunSpeed(float runSpeed)
+    {
+        this.runSpeed = runSpeed;
+    }
+
+    public void setDefaultRunSpeed()
+    {
+        this.runSpeed = defaultRunSpeed;
+    } 
 }

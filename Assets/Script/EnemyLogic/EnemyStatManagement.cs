@@ -13,7 +13,7 @@ public class EnemyStatManagement : StatManagement
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    public override void takeDamage(int damage)
+    public override void takeDamage(float damage)
     {
         base.takeDamage(damage);
         healthBar.SetHealth(currentHealth);

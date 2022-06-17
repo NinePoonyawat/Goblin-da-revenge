@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class StatManagement : MonoBehaviour
 {
-    public int maxHealth;
-    public int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
+
+    public SpriteRenderer sprite;
+    public Color defaultColor;
+
+    public ComponentHandler allComponent;
 
     protected virtual void Start()
     {
         currentHealth = maxHealth;
+
+        defaultColor = sprite.color;
     }
 
-    public virtual void takeDamage(int damage)
+    public virtual void takeDamage(float damage)
     {
         currentHealth -= damage;
 
@@ -20,10 +27,19 @@ public class StatManagement : MonoBehaviour
         {
             die();
         }
+
+        StartCoroutine(flashRed());
     }
 
     public virtual void die()
     {
         Destroy(gameObject);
+    }
+
+    public IEnumerator flashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = defaultColor;
     }
 }

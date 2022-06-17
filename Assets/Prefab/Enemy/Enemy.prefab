@@ -783,6 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 0
+  sprite: {fileID: 9084657536468676682}
   healthBar: {fileID: 1296526617254807613}
 --- !u!114 &557802590725028131
 MonoBehaviour:
