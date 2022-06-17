@@ -24,8 +24,6 @@ public class Bullet : MonoBehaviour
     {
         if(entity.CompareTag(entityToAttack))
         {
-            Debug.Log(entity.tag);
-            Debug.Log(entityToAttack);
             entity.GetComponent<StatManagement>().takeDamage(damage);
             Destroy(gameObject);
         }

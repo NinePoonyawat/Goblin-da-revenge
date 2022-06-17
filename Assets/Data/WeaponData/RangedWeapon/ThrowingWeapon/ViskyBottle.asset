@@ -18,8 +18,8 @@ MonoBehaviour:
   damage: 12
   cooldownTime: 3
   image: {fileID: 21300000, guid: c34b4c1dfd5bb2647b5eca11524756c2, type: 3}
-  size: 1
-  pickPosition: {x: 0, y: 0, z: 0}
+  size: 30
+  pickPosition: {x: 1.5, y: 0, z: 0}
   detectedRange: 50
   description: Hola
   bulletPrefab: {fileID: 4350861563774231754, guid: d8c9328e8236d2b49b49cebba047eee1, type: 3}

@@ -12,7 +12,6 @@ public class ThrowingWeaponLogic : WeaponLogic
 
     public LayerMask entityLayers;
     private int damage;
-    private string entityToAttack;
 
     private Transform target;
 
@@ -24,7 +23,6 @@ public class ThrowingWeaponLogic : WeaponLogic
 
         bulletPrefab = ((ThrowingWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).bulletPrefab;
         damage = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand.damage;
-        entityToAttack = "Player";
 
         gunPoint.localPosition = ((ThrowingWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).gunPoint;
     }
@@ -42,19 +40,20 @@ public class ThrowingWeaponLogic : WeaponLogic
     {
         float x = target.position.x - gunPoint.position.x;
         float y = target.position.y - gunPoint.position.y;
+        float division = y-x;
+        if (division < 0)
+        {
+            division = -division;
+        }
         if (x <= 0)
         {
-            Xvelocity = (float) (x/(Math.Sqrt(2*(y - x))));
-            Yvelocity = (float) (-x/(Math.Sqrt(2*(y - x))));
+            Xvelocity = (float) (x/(Math.Sqrt(2*(division))));
+            Yvelocity = (float) (-x/(Math.Sqrt(2*(division))));
         }
         else
         {
-            if (x < y)
-            {
-                x = y;
-            }
-            Xvelocity = (float) (x/(Math.Sqrt(2*(y - x))));
-            Yvelocity = (float) (x/(Math.Sqrt(2*(y - x))));
+            Xvelocity = (float) (x/(Math.Sqrt(2*(division))));
+            Yvelocity = (float) (x/(Math.Sqrt(2*(division))));
         }
     }
 }
