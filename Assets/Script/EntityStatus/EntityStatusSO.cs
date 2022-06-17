@@ -2,14 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EntityStatusSO : ScriptableObject
+[CreateAssetMenu]
+public class EntityStatusSO : ScriptableObject
 {
+    [SerializeField]
+    private string statusName;
+
     [SerializeField]
     private bool isInfinite;
     [SerializeField]
     private float cooldown;
 
-    public abstract void statusStart(StatManagement character);
-    public abstract void action(StatManagement character);
-    public abstract void statusFinish(StatManagement character);
+    public virtual void statusStart(StatManagement character)
+    {
+    }
+
+    public virtual void action(StatManagement character)
+    {
+    }
+
+    public virtual void statusFinish(StatManagement character)
+    {
+    }
+
+    public bool getIsInfinite()
+    {
+        return isInfinite;
+    }
+
+    public float getCooldown()
+    {
+        return cooldown;
+    }
 }

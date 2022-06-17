@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EntityStatus : ScriptableObject
+public class EntityStatus : MonoBehaviour
 {
+    private bool hasSetStatus = false;
+
     [SerializeField]
     private EntityStatusSO entityStatus;
     [SerializeField]
@@ -13,20 +15,14 @@ public abstract class EntityStatus : ScriptableObject
     public float cooldown;
     private float cooldownCounter;
 
-    // Start is called before the first frame update
-    protected virtual void Start()
-    {
-        if(!isInfinite)
-        {
-            cooldownCounter = cooldown;
-        }
-    }
-
     // Update is called once per frame
     protected virtual void Update()
     {
+        if (!hasSetStatus)
+            return;
         if(!isInfinite && cooldownCounter <= 0)
         {
+            entityStatus.statusFinish(statManagement);
             Destroy(this);
         }
         entityStatus.action(statManagement);
@@ -34,6 +30,24 @@ public abstract class EntityStatus : ScriptableObject
 
     void FixedUpdate()
     {
+        if (!hasSetStatus)
+            return;
         cooldownCounter -= Time.deltaTime;
+    }
+
+    public void initial(EntityStatusSO entityStatus,StatManagement statManagement)
+    {
+        this.entityStatus = entityStatus;
+        this.statManagement = statManagement;
+        this.isInfinite = entityStatus.getIsInfinite();
+        this.cooldown = entityStatus.getCooldown();
+
+        if(!isInfinite)
+        {
+            cooldownCounter = cooldown;
+        }
+
+        entityStatus.statusStart(statManagement);
+        hasSetStatus = true;
     }
 }

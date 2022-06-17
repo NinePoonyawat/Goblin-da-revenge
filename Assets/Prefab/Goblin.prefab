@@ -166,6 +166,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   sprite: {fileID: 2008518737774560496}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  allComponent: {fileID: 0}
   healthBar: {fileID: 0}
 --- !u!114 &2008518737774560502
 MonoBehaviour:
@@ -216,7 +218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68f9e06cebb0b94e9c0b331fb80eadd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterTransform: {fileID: 2008518737774560499}
   handlingWeaponManagement: {fileID: 5031035033724319123}
+  characterController2D: {fileID: 2008518737774560502}
+  playerMovement: {fileID: 2008518737774560503}
 --- !u!1 &2008518738070415238
 GameObject:
   m_ObjectHideFlags: 0

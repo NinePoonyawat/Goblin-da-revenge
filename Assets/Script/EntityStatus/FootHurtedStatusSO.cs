@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "EntityStatus/FootHurtedStatus")]
 public class FootHurtedStatusSO : EntityStatusSO
 {
     [SerializeField]

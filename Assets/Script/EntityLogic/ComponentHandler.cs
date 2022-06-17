@@ -17,14 +17,26 @@ public class ComponentHandler : MonoBehaviour
 
     void Start()
     {
-        thisPosition = characterTransform.position;
+        try
+        {
+            thisPosition = characterTransform.position;
+        }
+        catch (System.Exception)
+        {
+        }
     }
 
     void FixedUpdate()
     {
-        previusPosition = thisPosition;
+        try
+        {
+            previusPosition = thisPosition;
         thisPosition = characterTransform.position;
         deltaPosition = thisPosition - previusPosition;
+        }
+        catch (System.Exception)
+        {
+        }
     }
 
     public bool hasMove()
