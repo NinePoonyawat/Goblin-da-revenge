@@ -20,18 +20,19 @@ public class Bullet : MonoBehaviour
         StartCoroutine(countdown());
     }
 
-    void OnTriggerEnter2D(Collider2D entity)
+    protected virtual void OnTriggerEnter2D(Collider2D entity)
     {
-        Debug.Log(entityToAttack);
         if(entity.CompareTag(entityToAttack))
         {
+            Debug.Log(entity.tag);
+            Debug.Log(entityToAttack);
             entity.GetComponent<StatManagement>().takeDamage(damage);
             Destroy(gameObject);
         }
     }
 
     // Update is called once per frame
-    IEnumerator countdown()
+    protected IEnumerator countdown()
     {
         yield return new WaitForSeconds(2f);
         Die();

@@ -20,6 +20,27 @@ public class HandlingWeaponManagement : MonoBehaviour
 
     protected virtual void Start()
     {
+        setWeapon(weaponInHand);
+    }
+
+    void Update()
+    {
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        if (attackCooldownCount > 0)
+        {
+            attackCooldownCount -= Time.deltaTime;
+        }
+        if (attackCooldownCount <= 0 && isOnAttackCooldown)
+        {
+            isOnAttackCooldown = false;
+        }
+    }
+
+    public void setWeapon(Weapon weaponInHand)
+    {
         gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;
         gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size, weaponInHand.size, 1);
         gameObject.GetComponent<Transform>().localPosition = weaponInHand.pickPosition;
@@ -34,45 +55,6 @@ public class HandlingWeaponManagement : MonoBehaviour
         }
 
         weaponLogic = GO.GetComponent<WeaponLogic>();
-
-        // if (!isPlayerControl)
-        // {
-        //     playerTransform = playerToDetected.GetComponent<Transform>();
-        //     thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
-        // }
     }
 
-    void Update()
-    {
-        // if (isPlayerControl)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
-        //     {
-        //         weaponInHand.attack("Enemy");
-        //         attackCooldownCount = weaponInHand.cooldownTime;
-        //         isOnAttackCooldown = true;
-        //     }
-        // }
-        // else
-        // {
-        //     if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange && !isOnAttackCooldown)
-        //     {
-        //         weaponInHand.attack("Player");
-        //         attackCooldownCount = weaponInHand.cooldownTime;
-        //         isOnAttackCooldown = true;
-        //     }
-        // }
-    }
-
-    protected virtual void FixedUpdate()
-    {
-        if (attackCooldownCount > 0)
-        {
-            attackCooldownCount -= Time.deltaTime;
-        }
-        if (attackCooldownCount <= 0 && isOnAttackCooldown)
-        {
-            isOnAttackCooldown = false;
-        }
-    }
 }

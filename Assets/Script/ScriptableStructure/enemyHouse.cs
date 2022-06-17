@@ -32,6 +32,7 @@ public class enemyHouse : MonoBehaviour
             GameObject GO = Instantiate(hostPrefab,whereIsDoor.position,new Quaternion(0,180,0,0));
             GO.transform.SetParent(enemyRoot);
             isHostInTheHouse = false;
+            this.enabled = false;
         }
     }
 

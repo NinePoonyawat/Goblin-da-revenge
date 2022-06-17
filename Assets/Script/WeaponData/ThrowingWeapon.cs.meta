@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c09cd30206f50e408597083be9d1627
+guid: 92d8e26489fb00247a6605327bbbbbb7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - weaponPrefab: {fileID: 4981396875044536270, guid: 751050dd1067b714ab5cdb848cb07a0f, type: 3}
+  - weaponPrefab: {fileID: 3219391984200246090, guid: adbc688afd091844a80bcdc6a4be2ed2, type: 3}
   - weaponLogic: {instanceID: 0}
   - image: {instanceID: 0}
   - bulletPrefab: {instanceID: 0}

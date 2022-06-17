@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563307158548681694, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Mass
+      value: 2.7217603
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10773184783ccf04894229e563f72d99, type: 3}
 --- !u!1 &509967574
@@ -470,7 +474,11 @@ PrefabInstance:
     - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: weaponInHand
       value: 
-      objectReference: {fileID: 11400000, guid: 14c87b46794458347917c4faa1080b93, type: 2}
+      objectReference: {fileID: 11400000, guid: 3ac4f30d3070fa644afc9d4874ba43d7, type: 2}
+    - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: entityToAttack
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
       value: Villager
@@ -522,6 +530,10 @@ PrefabInstance:
     - target: {fileID: 7563307158548681692, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307158548681694, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Mass
+      value: 2.7217603
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10773184783ccf04894229e563f72d99, type: 3}
@@ -620,7 +632,7 @@ GameObject:
   - component: {fileID: 1435559415}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
