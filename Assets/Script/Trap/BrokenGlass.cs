@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BrokenGlass : MonoBehaviour
 {
+    public float lifeTime = 7.0f;
     public EntityStatusSO entityStatus;
 
-    // Start is called before the first frame update
+    void Start()
+    {
+        StartCoroutine(countdown());
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -15,5 +20,11 @@ public class BrokenGlass : MonoBehaviour
             status.initial(entityStatus,collision.gameObject.GetComponent<StatManagement>());
             Destroy(gameObject);
         }
+    }
+
+    private IEnumerator countdown()
+    {
+        yield return new WaitForSeconds(lifeTime);
+        Destroy(gameObject);
     }
 }

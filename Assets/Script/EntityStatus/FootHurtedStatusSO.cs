@@ -15,7 +15,7 @@ public class FootHurtedStatusSO : EntityStatusSO
 
     public override void action(StatManagement character)
     {
-        if (character.allComponent.hasXMove())
+        if (character.allComponent.characterController2D.hasXMove())
         {
             character.takeDamage(walkingDamage);
         }

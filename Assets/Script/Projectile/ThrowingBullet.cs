@@ -26,8 +26,13 @@ public class ThrowingBullet : Bullet
         base.OnTriggerEnter2D(entity);
         if(entity.CompareTag("Ground"))
         {
-            Destroy(gameObject);
+            hitGroundEvent();
         }
+    }
+
+    protected virtual void hitGroundEvent()
+    {
+        Destroy(gameObject);
     }
 
 }

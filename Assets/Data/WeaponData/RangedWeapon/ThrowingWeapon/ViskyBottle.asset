@@ -22,7 +22,7 @@ MonoBehaviour:
   pickPosition: {x: 1.5, y: 0, z: 0}
   detectedRange: 50
   description: Hola
-  bulletPrefab: {fileID: 4350861563774231754, guid: d8c9328e8236d2b49b49cebba047eee1, type: 3}
+  bulletPrefab: {fileID: 5998023300151107643, guid: 5a26a16d6fdf5c44a917030f36fac8c3, type: 3}
   gunPoint: {x: 0, y: 0, z: 0}
   enemyLayers:
     serializedVersion: 2

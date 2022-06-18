@@ -17,6 +17,9 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+	private Transform playerTransform;
+	private Vector3 thisPosition,previusPosition,deltaPosition;
+
 	[Header("Events")]
 	[Space]
 
@@ -34,10 +37,20 @@ public class CharacterController2D : MonoBehaviour
 
 	}
 
+	private void Start()
+	{
+		playerTransform = gameObject.GetComponent<Transform>();
+		thisPosition = playerTransform.position;
+	}
+
 	private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
+
+		previusPosition = thisPosition;
+		thisPosition = playerTransform.position;
+		deltaPosition = thisPosition - previusPosition;
 
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -103,5 +116,20 @@ public class CharacterController2D : MonoBehaviour
 	public bool isFacingRight()
 	{
 		return m_FacingRight;
+	}
+
+	public bool hasMove()
+	{
+		return deltaPosition != Vector3.zero;
+	}
+
+	public bool hasXMove()
+	{
+		return deltaPosition.x != 0;
+	}
+
+	public bool hasYMove()
+	{
+		return deltaPosition.y != 0;
 	}
 }
