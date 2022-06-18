@@ -167,7 +167,7 @@ MonoBehaviour:
   currentHealth: 0
   sprite: {fileID: 2008518737774560496}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  allComponent: {fileID: 0}
+  allComponent: {fileID: 469860522899768081}
   healthBar: {fileID: 0}
 --- !u!114 &2008518737774560502
 MonoBehaviour:

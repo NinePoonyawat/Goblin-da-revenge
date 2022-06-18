@@ -22,17 +22,22 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
         base.Start();
 
         entityToAttack = "Player";
-
         playerToDetected = GameObject.Find("PlayingGoblin");
         
         playerTransform = playerToDetected.GetComponent<Transform>();
-        thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
         attackAlert = gameObject.transform.parent.parent.gameObject.transform.Find("AttackAlert").gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void setWeapon(Weapon newWeaponInHand)
     {
+        base.setWeapon(newWeaponInHand);
+        thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
+    }
+
+    // Update is called once per frame
+    protected override void Update()
+    {
+        base.Update();
         if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack)
             {
                 attackAlert.SetActive(true);

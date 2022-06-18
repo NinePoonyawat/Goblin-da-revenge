@@ -679,17 +679,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7563307158548681692, guid: 10773184783ccf04894229e563f72d99, type: 3}
   m_PrefabInstance: {fileID: 689546271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1376683622 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 469860522899768081, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
-  m_PrefabInstance: {fileID: 2008518737935245113}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68f9e06cebb0b94e9c0b331fb80eadd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1435559414
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +831,34 @@ PrefabInstance:
       propertyPath: rangeToDetected
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: peopleInHouse.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: peopleInHouse.Array.data[0].enemyCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: peopleInHouse.Array.data[1].enemyCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: peopleInHouse.Array.data[0].enemyPrefab
+      value: 
+      objectReference: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: peopleInHouse.Array.data[0].enemyWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 14c87b46794458347917c4faa1080b93, type: 2}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: peopleInHouse.Array.data[1].enemyPrefab
+      value: 
+      objectReference: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: peopleInHouse.Array.data[1].enemyWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ac4f30d3070fa644afc9d4874ba43d7, type: 2}
     - target: {fileID: 7673858346747292417, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1140,10 +1157,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 630287596}
-    - target: {fileID: 396659784867990807, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
-      propertyPath: allComponent
-      value: 
-      objectReference: {fileID: 1376683622}
     - target: {fileID: 2008518737774560499, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
       propertyPath: m_RootOrder
       value: 3

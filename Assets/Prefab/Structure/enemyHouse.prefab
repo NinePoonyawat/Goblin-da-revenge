@@ -112,5 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whereIsDoor: {fileID: 0}
   hostPrefab: {fileID: 0}
+  peopleInHouse:
+  - enemyPrefab: {fileID: 0}
+    enemyWeapon: {fileID: 0}
+    enemyCount: 0
   isHostInTheHouse: 1
   rangeToDetected: 20

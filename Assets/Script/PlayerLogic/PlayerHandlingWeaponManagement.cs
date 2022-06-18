@@ -8,12 +8,12 @@ public class PlayerHandlingWeaponManagement : HandlingWeaponManagement
     protected override void Start()
     {
         base.Start();
-        Debug.Log(weaponInHand);
         entityToAttack = "Enemy";
     }
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
             {
                 weaponLogic.attack("Enemy");

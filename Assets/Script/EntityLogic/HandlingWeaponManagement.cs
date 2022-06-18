@@ -6,6 +6,7 @@ public class HandlingWeaponManagement : MonoBehaviour
 {
     [SerializeField]
     public Weapon weaponInHand;
+    private bool isWeaponInHand;
 
     [SerializeField]
     public Transform whereIsHand;
@@ -20,15 +21,24 @@ public class HandlingWeaponManagement : MonoBehaviour
 
     protected virtual void Start()
     {
+        if (weaponInHand == null)
+        {
+            isWeaponInHand = false;
+            return;
+        }
         setWeapon(weaponInHand);
     }
 
-    void Update()
+    protected virtual void Update()
     {
+        if (!isWeaponInHand)
+            return;
     }
 
     protected virtual void FixedUpdate()
     {
+        if (!weaponInHand)
+            return;
         if (attackCooldownCount > 0)
         {
             attackCooldownCount -= Time.deltaTime;
@@ -39,13 +49,19 @@ public class HandlingWeaponManagement : MonoBehaviour
         }
     }
 
-    public void setWeapon(Weapon weaponInHand)
+    public virtual void setWeapon(Weapon newWeaponInHand)
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = weaponInHand.image;
-        gameObject.GetComponent<Transform>().localScale = new Vector3(weaponInHand.size, weaponInHand.size, 1);
-        gameObject.GetComponent<Transform>().localPosition = weaponInHand.pickPosition;
+        if (newWeaponInHand == null)
+        {
+            return;
+        }
+        weaponInHand = newWeaponInHand;
+        isWeaponInHand = true;
+        gameObject.GetComponent<SpriteRenderer>().sprite = newWeaponInHand.image;
+        gameObject.GetComponent<Transform>().localScale = new Vector3(newWeaponInHand.size, newWeaponInHand.size, 1);
+        gameObject.GetComponent<Transform>().localPosition = newWeaponInHand.pickPosition;
 
-        GO = Instantiate(weaponInHand.weaponPrefab) as GameObject;
+        GO = Instantiate(newWeaponInHand.weaponPrefab) as GameObject;
         GO.transform.SetParent(this.transform);
         GO.GetComponent<Transform>().localPosition = Vector3.zero;
 
@@ -55,6 +71,27 @@ public class HandlingWeaponManagement : MonoBehaviour
         }
 
         weaponLogic = GO.GetComponent<WeaponLogic>();
+    }
+
+    public void releaseCurrentWeapon()
+    {
+        try
+        {
+            Destroy(gameObject.transform.GetChild(0));
+        }
+        catch (System.Exception)
+        {
+        }
+        Debug.Log("do this");
+        isWeaponInHand = false;
+        weaponInHand = null;
+        weaponLogic = null;
+    }
+
+    public void changeWeapon(Weapon weapon)
+    {
+        releaseCurrentWeapon();
+        setWeapon(weapon);
     }
 
 }
