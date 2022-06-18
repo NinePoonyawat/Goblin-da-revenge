@@ -784,6 +784,8 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   sprite: {fileID: 9084657536468676682}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  allComponent: {fileID: 0}
   healthBar: {fileID: 1296526617254807613}
 --- !u!114 &557802590725028131
 MonoBehaviour:
@@ -797,7 +799,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68f9e06cebb0b94e9c0b331fb80eadd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterTransform: {fileID: 0}
   handlingWeaponManagement: {fileID: 9084657537371383387}
+  characterController2D: {fileID: 0}
+  playerMovement: {fileID: 0}
 --- !u!114 &927555566915223070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,9 +815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ffbc9e41d557a4baae44ca41a3d52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stalkSpeed: 1
+  stalkSpeed: 0
   distance: 0
-  rb: {fileID: 9084657536468676679}
   target: {fileID: 0}
   firePoint: {fileID: 9084657536592060098}
   bulletPrefab: {fileID: 4192513642523162678, guid: f739c77d929f0174e81856eaa959cec3, type: 3}
