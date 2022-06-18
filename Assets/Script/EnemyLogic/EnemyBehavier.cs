@@ -10,7 +10,6 @@ public class EnemyBehavier : MonoBehaviour
 
     private IEnumerator coroutine;
     
-    public Rigidbody2D rb;
     [SerializeField] private Transform target;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
@@ -28,11 +27,13 @@ public class EnemyBehavier : MonoBehaviour
     void Update()
     {
         if (isMoving && isForward) {
-            rb.velocity = new Vector2(-100 * stalkSpeed * Time.deltaTime, 0f);
+            transform.position = new Vector2(transform.position.x + Time.deltaTime * stalkSpeed,
+             transform.position.y);
             distance = Vector3.Distance(target.position, transform.position);
         }
         if (isMoving && !isForward) {
-            rb.velocity = new Vector2(100 * stalkSpeed * Time.deltaTime, 0f);
+            transform.position = new Vector2(transform.position.x - Time.deltaTime * stalkSpeed,
+             transform.position.y);
             distance = Vector3.Distance(target.position, transform.position);
         }
         
