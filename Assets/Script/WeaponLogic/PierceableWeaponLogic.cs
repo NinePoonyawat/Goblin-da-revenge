@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class PierceableWeaponLogic : WeaponLogic
 {
-    
+    public override void attack(string entityToAttack)
+    {
+        
+    }
 }
