@@ -82,7 +82,6 @@ public class HandlingWeaponManagement : MonoBehaviour
         catch (System.Exception)
         {
         }
-        Debug.Log("do this");
         isWeaponInHand = false;
         weaponInHand = null;
         weaponLogic = null;
