@@ -20,7 +20,7 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 44ec4752918d9aa47bdb539e3708eff9, type: 3}
   size: 30
   pickPosition: {x: 3.6, y: 0.6, z: 0}
-  detectedRange: 50
+  detectedRange: 15
   description: dunno
   bulletPrefab: {fileID: 1383455588188459026, guid: 70e5bccf65c064f4b8e72127d214101d, type: 3}
   gunPoint: {x: 1, y: 0, z: 0}
