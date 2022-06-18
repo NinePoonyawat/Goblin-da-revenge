@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: enemyName
       value: Villager
       objectReference: {fileID: 0}
+    - target: {fileID: 2482654486413470785, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -58,6 +62,14 @@ PrefabInstance:
     - target: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_Name
       value: Villager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084657536468676682, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084657536468676682, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e3b1d062068864382d469a087aee7b, type: 3}

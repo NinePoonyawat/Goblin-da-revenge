@@ -21,30 +21,63 @@ public class EnemyBehavier : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("PlayingGoblin").transform.GetComponent<Transform>();
-        StartCoroutine(aggroState());
+
+        if (target.transform.position.x > transform.position.x)
+        {
+            isFacingRight = true;
+            transform.Rotate(0f, 180f, 0f);
+        }
+        isForward = true;
+        isMoving = true;
+        //StartCoroutine(aggroState());
     }
 
     void Update()
     {
+        Debug.Log(isFacingRight);
         if (isMoving && isForward) {
-            transform.position = new Vector2(transform.position.x + Time.deltaTime * stalkSpeed,
-             transform.position.y);
-            distance = Vector3.Distance(target.position, transform.position);
+            if (isFacingRight)
+            {
+                moveForward();
+            }
+            else
+            {
+                moveBackward();
+            }
         }
         if (isMoving && !isForward) {
-            transform.position = new Vector2(transform.position.x - Time.deltaTime * stalkSpeed,
-             transform.position.y);
-            distance = Vector3.Distance(target.position, transform.position);
+            if (isFacingRight)
+            {
+                moveBackward();
+            }
+            else
+            {
+                moveBackward();
+            }
         }
         
-        if (isFacingRight && target.position.x > transform.position.x) {
+        if (isFacingRight && target.position.x < transform.position.x) {
             isFacingRight = false;
             transform.Rotate(0f, 180f, 0f);
         }
-        if (!isFacingRight && target.position.x < transform.position.x) {
+        if (!isFacingRight && target.position.x > transform.position.x) {
             isFacingRight = true;
             transform.Rotate(0f, 180f, 0f);
         }
+    }
+
+    public void moveForward()
+    {
+        transform.position = new Vector2(transform.position.x + Time.deltaTime * stalkSpeed,
+             transform.position.y);
+        distance = Vector3.Distance(target.position, transform.position);
+    }
+
+    public void moveBackward()
+    {
+        transform.position = new Vector2(transform.position.x - Time.deltaTime * stalkSpeed,
+             transform.position.y);
+        distance = Vector3.Distance(target.position, transform.position);
     }
 
     IEnumerator fleeState()

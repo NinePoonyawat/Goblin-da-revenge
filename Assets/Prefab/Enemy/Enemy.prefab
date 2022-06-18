@@ -815,12 +815,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ffbc9e41d557a4baae44ca41a3d52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stalkSpeed: 0
+  stalkSpeed: 1
   distance: 0
   target: {fileID: 0}
   firePoint: {fileID: 9084657536592060098}
   bulletPrefab: {fileID: 4192513642523162678, guid: f739c77d929f0174e81856eaa959cec3, type: 3}
-  isFacingRight: 1
+  isFacingRight: 0
   isMoving: 0
   isForward: 0
 --- !u!1 &9084657536592060099

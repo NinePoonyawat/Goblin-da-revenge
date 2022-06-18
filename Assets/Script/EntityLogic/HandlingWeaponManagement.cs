@@ -65,10 +65,12 @@ public class HandlingWeaponManagement : MonoBehaviour
         GO.transform.SetParent(this.transform);
         GO.GetComponent<Transform>().localPosition = Vector3.zero;
 
-        if (gameObject.transform.parent.parent.gameObject.GetComponent<SpriteRenderer>().flipX)
-        {
-            GO.transform.Rotate(0, 180, 0);
-        }
+        GO.transform.rotation = gameObject.transform.parent.parent.transform.rotation;
+        // if (gameObject.transform.parent.parent.gameObject.GetComponent<SpriteRenderer>().flipX)
+        // {
+        //     Debug.Log("do this line");
+        //     GO.transform.Rotate(0, 180, 0);
+        // }
 
         weaponLogic = GO.GetComponent<WeaponLogic>();
     }
