@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LobbyRoom.unity
     guid: 5bb986a044d02a44da75a41d008f3a55
   - enabled: 1
+    path: Assets/Scenes/ChapterOneMap.unity
+    guid: 4360bd3b9666d5a4684c2bfabef6d542
+  - enabled: 1
     path: Assets/Scenes/ManagingScene.unity
     guid: 81af36a4e9649974bb14e361168654f4
   m_configObjects: {}

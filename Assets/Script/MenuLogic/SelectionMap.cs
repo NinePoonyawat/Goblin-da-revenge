@@ -12,8 +12,7 @@ public class SelectionMap : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 isAlreadyTrigger = true;
-                SceneHandler.instance.Load("ManagingScene");
-                SceneHandler.instance.Unload("LobbyRoom");
+                SceneHandler.instance.Load("ChapterOneMap");
             }
         }
     }
