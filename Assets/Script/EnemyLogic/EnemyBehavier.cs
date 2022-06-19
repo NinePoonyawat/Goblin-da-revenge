@@ -34,7 +34,6 @@ public class EnemyBehavier : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isFacingRight);
         if (isMoving && isForward) {
             if (isFacingRight)
             {
