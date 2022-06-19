@@ -20,6 +20,9 @@ public class enemyHouse : MonoBehaviour
     [SerializeField]
     private float rangeToDetected;
 
+    [SerializeField]
+    private float emitCooldown = 2f;
+
     private Transform goblinToDetected;
     private Transform enemyRoot;
     // Start is called before the first frame update
@@ -33,13 +36,13 @@ public class enemyHouse : MonoBehaviour
     {
         if(Vector3.Distance(goblinToDetected.position,whereIsDoor.position) <= rangeToDetected && isHostInTheHouse)
         {
-            emitAllEnemy();
+            StartCoroutine(emitAllEnemy());
             isHostInTheHouse = false;
             this.enabled = false;
         }
     }
 
-    void emitAllEnemy()
+    IEnumerator emitAllEnemy()
     {
         foreach (var memberGroup in peopleInHouse)
         {
@@ -51,6 +54,7 @@ public class enemyHouse : MonoBehaviour
                 {
                     GO.GetComponent<ComponentHandler>().handlingWeaponManagement.changeWeapon(memberGroup.enemyWeapon);
                 }
+                yield return new WaitForSeconds(emitCooldown);
             }
         }
     }

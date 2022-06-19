@@ -38,7 +38,10 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
     protected override void Update()
     {
         base.Update();
-        if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack)
+        if (playerToDetected == null)
+            return;
+        float range = Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position));
+        if (range <= weaponInHand.detectedRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack)
             {
                 attackAlert.SetActive(true);
                 alertCooldownCount = alertCooldown;
@@ -46,7 +49,7 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
             }
         if (hasAttack)
         {
-            if (Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position)) <= weaponInHand.detectedRange)
+            if (range <= weaponInHand.detectedRange)
             {
                 weaponLogic.attack("Player");
                 attackCooldownCount = weaponInHand.cooldownTime;

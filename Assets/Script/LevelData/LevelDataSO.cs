@@ -13,7 +13,15 @@ public class LevelDataSO : ScriptableObject
     [TextArea]
     private string levelDescription;
 
+    [SerializeField]
+    private string terminateSceneName;
+
     private LevelState levelState = LevelState.Locked;
+
+    public string getTerminateSceneName()
+    {
+        return terminateSceneName;
+    }
 
     public enum LevelState
     {

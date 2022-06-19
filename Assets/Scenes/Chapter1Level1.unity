@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Villager (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7563307158548681682, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: stalkSpeed
       value: 1
@@ -844,6 +848,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1633055539}
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+      propertyPath: emitCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: rangeToDetected
       value: 5
       objectReference: {fileID: 0}
@@ -853,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyCount
@@ -861,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[2].enemyCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyPrefab
@@ -870,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 14c87b46794458347917c4faa1080b93, type: 2}
+      objectReference: {fileID: 11400000, guid: 879326b8168391f488bc461ff1385b80, type: 2}
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyPrefab
       value: 
@@ -886,7 +894,7 @@ PrefabInstance:
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[2].enemyWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 879326b8168391f488bc461ff1385b80, type: 2}
+      objectReference: {fileID: 11400000, guid: 14c87b46794458347917c4faa1080b93, type: 2}
     - target: {fileID: 7673858346747292417, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1024,7 +1032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657357603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.778, y: 0.896, z: -10}
+  m_LocalPosition: {x: -3.778, y: 2.896, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1171,7 +1179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7298710740216537108, guid: 9c14ebb7f5e8a6242858452b4b0d8b28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.896
+      value: 2.896
       objectReference: {fileID: 0}
     - target: {fileID: 7298710740216537108, guid: 9c14ebb7f5e8a6242858452b4b0d8b28, type: 3}
       propertyPath: m_LocalPosition.z

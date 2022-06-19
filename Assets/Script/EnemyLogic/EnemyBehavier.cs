@@ -34,6 +34,8 @@ public class EnemyBehavier : MonoBehaviour
 
     void Update()
     {
+        if (target == null)
+            return;
         if (isMoving && isForward) {
             if (isFacingRight)
             {
