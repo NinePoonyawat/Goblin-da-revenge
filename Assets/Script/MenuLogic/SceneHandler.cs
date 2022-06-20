@@ -9,7 +9,14 @@ public class SceneHandler : MonoBehaviour
     
     private void Awake()
     {
-        instance = this;
+        if (instance != null & instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void Load(string sceneName)
@@ -28,6 +35,11 @@ public class SceneHandler : MonoBehaviour
         }
     }
 
+    public void RestartScene()
+    {
+        StartCoroutine(LoadAsync(SceneManager.GetActiveScene().name));
+    }
+
     public void Unload(string sceneName)
     {
         if(SceneManager.GetSceneByName(sceneName).isLoaded)
@@ -39,11 +51,15 @@ public class SceneHandler : MonoBehaviour
     IEnumerator LoadAsync(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName,LoadSceneMode.Single);
+        operation.allowSceneActivation = false;
 
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-
+            if (operation.progress >= 0.9f)
+            {
+                operation.allowSceneActivation = true;
+            }
             yield return null;
         }
     }
