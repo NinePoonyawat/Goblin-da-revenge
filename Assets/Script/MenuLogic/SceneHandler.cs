@@ -9,14 +9,7 @@ public class SceneHandler : MonoBehaviour
     
     private void Awake()
     {
-        if (instance != null & instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
-        }
+        instance = this;
     }
 
     public void Load(string sceneName)
@@ -27,11 +20,19 @@ public class SceneHandler : MonoBehaviour
         }
     }
 
+    public void BackToMenu()
+    {
+        if (!SceneManager.GetSceneByName("LobbyRoom").isLoaded)
+        {
+            StartCoroutine(LoadAsync("LobbyRoom"));
+        }
+    }
+
     public void Unload(string sceneName)
     {
         if(SceneManager.GetSceneByName(sceneName).isLoaded)
         {
-            SceneManager.UnloadSceneAsync(sceneName);
+            //SceneManager.UnloadSceneAsync(sceneName);
         }
     }
 
@@ -42,7 +43,6 @@ public class SceneHandler : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-            Debug.Log(operation.progress);
 
             yield return null;
         }

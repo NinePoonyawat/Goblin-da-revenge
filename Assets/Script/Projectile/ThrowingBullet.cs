@@ -12,13 +12,6 @@ public class ThrowingBullet : Bullet
     {
         entityToAttack = "Player";
         StartCoroutine(countdown());
-
-        rotationVector = new Vector3(0,0,rotationSpeed);
-    }
-
-    void Update()
-    {
-        rb.transform.Rotate(rotationVector);
     }
 
     protected override void OnTriggerEnter2D(Collider2D entity)
