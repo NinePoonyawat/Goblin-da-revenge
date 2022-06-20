@@ -23,10 +23,37 @@ public class LevelDataSO : ScriptableObject
         return terminateSceneName;
     }
 
-    public enum LevelState
+    public int getLevel()
+    {
+        return level;
+    }
+
+    public string getTitle()
+    {
+        return levelTitle;
+    }
+
+    public string getDescription()
+    {
+        return levelDescription;
+    }
+
+    public LevelState getLevelState()
+    {
+        return levelState;
+    }
+
+    // public enum LevelState
+    // {
+    //     Locked,
+    //     Passed,
+    //     Current
+    // }
+}
+
+public enum LevelState
     {
         Locked,
         Passed,
         Current
     }
-}

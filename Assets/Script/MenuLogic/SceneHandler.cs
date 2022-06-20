@@ -55,8 +55,9 @@ public class SceneHandler : MonoBehaviour
 
         while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            if (operation.progress >= 0.9f)
+            float progress = operation.progress;
+            float percentageProgress = Mathf.Clamp01(progress / .9f);
+            if (progress >= 0.9f)
             {
                 operation.allowSceneActivation = true;
             }
