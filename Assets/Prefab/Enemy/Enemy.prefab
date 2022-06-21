@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 8861367565087597146}
   - component: {fileID: 7216042820524917815}
   - component: {fileID: 8516115012019471044}
+  - component: {fileID: 4987933605883440464}
   m_Layer: 0
   m_Name: EnemyObject
   m_TagString: Untagged
@@ -183,6 +184,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4987933605883440464
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643864419363587685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a3348ca6996ea64f918ebed5ae76f4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1182661928468734827
 GameObject:
   m_ObjectHideFlags: 0

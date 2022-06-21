@@ -1026,6 +1026,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946913724}
   m_CullTransparentMesh: 1
+--- !u!1 &972564665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2164572718766417404, guid: 10773184783ccf04894229e563f72d99, type: 3}
+  m_PrefabInstance: {fileID: 1443012726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &972564667
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972564665}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ad746e98a8846c45a188740f16a914f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1167358511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6974454420481646941, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1990958301, guid: 40c3fa46cf62c2d4f935790907ca176d, type: 3}
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
       value: Villager
