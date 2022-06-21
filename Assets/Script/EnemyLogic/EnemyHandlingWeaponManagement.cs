@@ -31,7 +31,7 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
     public override void setWeapon(Weapon newWeaponInHand)
     {
         base.setWeapon(newWeaponInHand);
-        thisTransform = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Transform>();
+        thisTransform = gameObject.transform.GetChild(0).GetChild(0).transform;
     }
 
     // Update is called once per frame
@@ -40,8 +40,9 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
         base.Update();
         if (playerToDetected == null)
             return;
-        float range = Mathf.Abs(Vector3.Distance(playerTransform.position, thisTransform.position));
-        if (range <= weaponInHand.detectedRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack)
+        float range = Mathf.Abs(playerTransform.position.x - thisTransform.position.x);
+        bool isOnAttackRange = range <= weaponInHand.detectedRange;
+        if (isOnAttackRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack)
             {
                 attackAlert.SetActive(true);
                 alertCooldownCount = alertCooldown;
@@ -49,7 +50,7 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
             }
         if (hasAttack)
         {
-            if (range <= weaponInHand.detectedRange)
+            if (isOnAttackRange)
             {
                 weaponLogic.attack("Player");
                 attackCooldownCount = weaponInHand.cooldownTime;

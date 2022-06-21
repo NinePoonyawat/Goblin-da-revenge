@@ -23,7 +23,7 @@ MonoBehaviour:
   detectedRange: 15
   description: dunno
   bulletPrefab: {fileID: 1383455588188459026, guid: 70e5bccf65c064f4b8e72127d214101d, type: 3}
-  gunPoint: {x: 1, y: 0, z: 0}
+  gunPoint: {x: 0, y: 0, z: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256

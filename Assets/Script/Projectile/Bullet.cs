@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
     public int damage = 0;
     public string entityToAttack;
 
+    private bool isTriggered = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +24,10 @@ public class Bullet : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D entity)
     {
-        if(entity.CompareTag(entityToAttack))
+        if(entity.CompareTag(entityToAttack) && !isTriggered)
         {
             entity.GetComponent<StatManagement>().takeDamage(damage);
+            isTriggered = true;
             Destroy(gameObject);
         }
     }
