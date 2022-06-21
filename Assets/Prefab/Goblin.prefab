@@ -471,3 +471,4 @@ MonoBehaviour:
   GO: {fileID: 0}
   weaponLogic: {fileID: 0}
   entityToAttack: 
+  mainTransform: {fileID: 2008518737774560499}

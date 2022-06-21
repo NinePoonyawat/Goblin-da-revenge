@@ -19,6 +19,9 @@ public class HandlingWeaponManagement : MonoBehaviour
 
     public string entityToAttack;
 
+    [SerializeField]
+    protected Transform mainTransform;
+
     protected virtual void Start()
     {
         if (weaponInHand == null)
@@ -58,14 +61,14 @@ public class HandlingWeaponManagement : MonoBehaviour
         weaponInHand = newWeaponInHand;
         isWeaponInHand = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = newWeaponInHand.image;
-        gameObject.GetComponent<Transform>().localScale = new Vector3(newWeaponInHand.size, newWeaponInHand.size, 1);
-        gameObject.GetComponent<Transform>().localPosition = newWeaponInHand.pickPosition;
+        gameObject.transform.localScale = new Vector3(newWeaponInHand.size, newWeaponInHand.size, 1);
+        gameObject.transform.localPosition = newWeaponInHand.pickPosition;
 
         GO = Instantiate(newWeaponInHand.weaponPrefab) as GameObject;
         GO.transform.SetParent(this.transform);
         GO.GetComponent<Transform>().localPosition = Vector3.zero;
 
-        GO.transform.rotation = gameObject.transform.parent.parent.transform.rotation;
+        GO.transform.rotation = mainTransform.rotation;
         // if (gameObject.transform.parent.parent.gameObject.GetComponent<SpriteRenderer>().flipX)
         // {
         //     Debug.Log("do this line");

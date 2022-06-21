@@ -1062,6 +1062,7 @@ MonoBehaviour:
   GO: {fileID: 0}
   weaponLogic: {fileID: 0}
   entityToAttack: 
+  mainTransform: {fileID: 8861367565087597146}
   playerToDetected: {fileID: 0}
   alertCooldown: 0.5
 --- !u!1 &9084657537504218663

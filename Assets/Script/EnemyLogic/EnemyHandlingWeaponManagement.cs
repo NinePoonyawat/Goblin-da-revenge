@@ -25,7 +25,7 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
         playerToDetected = GameObject.Find("PlayingGoblin");
         
         playerTransform = playerToDetected.GetComponent<Transform>();
-        attackAlert = gameObject.transform.parent.parent.gameObject.transform.Find("AttackAlert").gameObject;
+        attackAlert = mainTransform.Find("AttackAlert").gameObject;
     }
 
     public override void setWeapon(Weapon newWeaponInHand)
