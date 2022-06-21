@@ -32,7 +32,7 @@ public class EnemyBehavier : MonoBehaviour
         }
         isForward = true;
         isMoving = true;
-        //StartCoroutine(aggroState());
+        StartCoroutine(aggroState());
     }
 
     void Update()
@@ -82,6 +82,11 @@ public class EnemyBehavier : MonoBehaviour
         mainTransform.position = new Vector2(mainTransform.position.x - Time.deltaTime * stalkSpeed,
              mainTransform.position.y);
         distance = Vector3.Distance(target.position, transform.position);
+    }
+
+    public void updateAfterAttack()
+    {
+        StartCoroutine(fleeState);
     }
 
     IEnumerator fleeState()
