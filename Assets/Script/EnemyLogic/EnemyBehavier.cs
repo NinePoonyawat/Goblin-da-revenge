@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemyBehavier : MonoBehaviour
 {
@@ -44,6 +45,23 @@ public class EnemyBehavier : MonoBehaviour
     {
         if (target == null)
             return;
+        float xDistance = transform.position.x - target.position.x;
+        if (Math.Abs(target.transform.position.x - transform.position.x) > 0.1)
+        {
+            updateMoving();
+        }
+        if (isFacingRight && xDistance > 0) {
+            isFacingRight = false;
+            transform.Rotate(0f, 180f, 0f);
+        }
+        if (!isFacingRight && xDistance < 0) {
+            isFacingRight = true;
+            transform.Rotate(0f, 180f, 0f);
+        }
+    }
+
+    public void updateMoving()
+    {
         if (isMoving && isForward) {
             if (isFacingRight)
             {
@@ -63,15 +81,6 @@ public class EnemyBehavier : MonoBehaviour
             {
                 moveBackward();
             }
-        }
-        
-        if (isFacingRight && target.position.x < transform.position.x) {
-            isFacingRight = false;
-            transform.Rotate(0f, 180f, 0f);
-        }
-        if (!isFacingRight && target.position.x > transform.position.x) {
-            isFacingRight = true;
-            transform.Rotate(0f, 180f, 0f);
         }
     }
 

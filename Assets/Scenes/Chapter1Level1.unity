@@ -1582,7 +1582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7673858346747292543, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: m_Name
-      value: enemyHouse
+      value: EnemyHouse
       objectReference: {fileID: 0}
     - target: {fileID: 7673858346747292543, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: m_IsActive
