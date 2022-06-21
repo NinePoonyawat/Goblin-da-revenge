@@ -910,7 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 0
-  sprite: {fileID: 9084657536468676682}
+  sprite: {fileID: 8516115012019471044}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   allComponent: {fileID: 0}
   healthBar: {fileID: 1296526617254807613}
@@ -1086,7 +1086,6 @@ MonoBehaviour:
   mainTransform: {fileID: 8861367565087597146}
   playerToDetected: {fileID: 0}
   alertCooldown: 0.5
-  enemyBehavier: {fileID: 927555566915223070}
 --- !u!1 &9084657537504218663
 GameObject:
   m_ObjectHideFlags: 0
