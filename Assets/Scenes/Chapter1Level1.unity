@@ -437,7 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 217693594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,6 +475,14 @@ PrefabInstance:
     - target: {fileID: 3787884861931950040, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307157504880062, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307157905753542, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
@@ -539,6 +547,14 @@ PrefabInstance:
     - target: {fileID: 7563307158548681694, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Mass
       value: 2.7217603
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307158701997402, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307158959315224, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10773184783ccf04894229e563f72d99, type: 3}
@@ -820,6 +836,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563307157504880062, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: weaponInHand
       value: 
@@ -827,6 +847,10 @@ PrefabInstance:
     - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: entityToAttack
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307157905753542, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
@@ -887,6 +911,14 @@ PrefabInstance:
     - target: {fileID: 7563307158548681694, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Mass
       value: 2.7217603
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307158701997402, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307158959315224, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10773184783ccf04894229e563f72d99, type: 3}
