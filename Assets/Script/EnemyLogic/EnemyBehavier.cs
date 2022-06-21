@@ -14,6 +14,8 @@ public class EnemyBehavier : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
 
+    private Transform mainTransform;
+
     public bool isFacingRight = false;
     public bool isMoving = false;
     public bool isForward = false;
@@ -21,8 +23,9 @@ public class EnemyBehavier : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("PlayingGoblin").transform.GetComponent<Transform>();
+        mainTransform = this.transform.parent.transform;
 
-        if (target.transform.position.x > transform.position.x)
+        if (target.transform.position.x > mainTransform.position.x)
         {
             isFacingRight = true;
             transform.Rotate(0f, 180f, 0f);
@@ -57,11 +60,11 @@ public class EnemyBehavier : MonoBehaviour
             }
         }
         
-        if (isFacingRight && target.position.x < transform.position.x) {
+        if (isFacingRight && target.position.x < mainTransform.position.x) {
             isFacingRight = false;
             transform.Rotate(0f, 180f, 0f);
         }
-        if (!isFacingRight && target.position.x > transform.position.x) {
+        if (!isFacingRight && target.position.x > mainTransform.position.x) {
             isFacingRight = true;
             transform.Rotate(0f, 180f, 0f);
         }
@@ -69,15 +72,15 @@ public class EnemyBehavier : MonoBehaviour
 
     public void moveForward()
     {
-        transform.position = new Vector2(transform.position.x + Time.deltaTime * stalkSpeed,
-             transform.position.y);
+        mainTransform.position = new Vector2(mainTransform.position.x + Time.deltaTime * stalkSpeed,
+             mainTransform.position.y);
         distance = Vector3.Distance(target.position, transform.position);
     }
 
     public void moveBackward()
     {
-        transform.position = new Vector2(transform.position.x - Time.deltaTime * stalkSpeed,
-             transform.position.y);
+        mainTransform.position = new Vector2(mainTransform.position.x - Time.deltaTime * stalkSpeed,
+             mainTransform.position.y);
         distance = Vector3.Distance(target.position, transform.position);
     }
 
