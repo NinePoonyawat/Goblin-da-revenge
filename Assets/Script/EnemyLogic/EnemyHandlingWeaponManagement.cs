@@ -26,8 +26,6 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
         
         playerTransform = playerToDetected.GetComponent<Transform>();
         attackAlert = gameObject.transform.parent.parent.gameObject.transform.Find("AttackAlert").gameObject;
-
-        GO.transform.Rotate(0f ,180f ,0f);
     }
 
     public override void setWeapon(Weapon newWeaponInHand)

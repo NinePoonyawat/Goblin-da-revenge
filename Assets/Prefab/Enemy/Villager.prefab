@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 63158725155249562, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63158725155249562, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 63158725155249562, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 983417614128689914, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: enemyName
       value: Villager
@@ -15,13 +27,37 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6773492315056578937, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773492315056578937, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773492315056578937, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 7216042820524917815, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: stalkSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7216042820524917815, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: isFacingRight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8516115012019471044, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084657536342997632, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.171
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084657536342997632, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_RootOrder

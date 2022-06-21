@@ -48,7 +48,7 @@ public class enemyHouse : MonoBehaviour
         {
             for (int i=0 ; i < memberGroup.enemyCount; i++)
             {
-                GameObject GO = Instantiate(hostPrefab,whereIsDoor.position,new Quaternion(0,180,0,0));
+                GameObject GO = Instantiate(hostPrefab,whereIsDoor.position,new Quaternion(0,0,0,0));
                 GO.transform.SetParent(enemyRoot);
                 if (memberGroup.enemyWeapon != null)
                 {

@@ -25,14 +25,19 @@ public class EnemyBehavier : MonoBehaviour
         target = GameObject.Find("PlayingGoblin").transform.GetComponent<Transform>();
         mainTransform = this.transform.parent.transform;
 
-        if (target.transform.position.x > mainTransform.position.x)
+        if (!isFacingRight && target.transform.position.x > transform.position.x)
         {
             isFacingRight = true;
             transform.Rotate(0f, 180f, 0f);
         }
+        else if (isFacingRight && target.transform.position.x < transform.position.x)
+        {
+            isFacingRight = false;
+            transform.Rotate(0f, 180f ,0f);
+        }
         isForward = true;
         isMoving = true;
-        StartCoroutine(aggroState());
+        //StartCoroutine(aggroState());
     }
 
     void Update()
@@ -60,11 +65,11 @@ public class EnemyBehavier : MonoBehaviour
             }
         }
         
-        if (isFacingRight && target.position.x < mainTransform.position.x) {
+        if (isFacingRight && target.position.x < transform.position.x) {
             isFacingRight = false;
             transform.Rotate(0f, 180f, 0f);
         }
-        if (!isFacingRight && target.position.x > mainTransform.position.x) {
+        if (!isFacingRight && target.position.x > transform.position.x) {
             isFacingRight = true;
             transform.Rotate(0f, 180f, 0f);
         }
@@ -84,10 +89,10 @@ public class EnemyBehavier : MonoBehaviour
         distance = Vector3.Distance(target.position, transform.position);
     }
 
-    public void updateAfterAttack()
-    {
-        StartCoroutine(fleeState);
-    }
+    // public void updateAfterAttack()
+    // {
+    //     StartCoroutine(fleeState);
+    // }
 
     IEnumerator fleeState()
     {
