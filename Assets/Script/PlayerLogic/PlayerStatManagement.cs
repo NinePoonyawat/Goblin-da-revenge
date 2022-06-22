@@ -18,4 +18,10 @@ public class PlayerStatManagement : StatManagement
         base.takeDamage(damage,damageType);
         healthBar.SetHealth(currentHealth);
     }
+
+    public override void die()
+    {
+        base.die();
+        GameObject.Find("GameLogic").GetComponent<LevelGameLogic>().gameLoss();
+    }
 }
