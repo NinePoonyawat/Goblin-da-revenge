@@ -13,9 +13,15 @@ public class PlayerStatManagement : StatManagement
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    public override void takeDamage(float damage)
+    public override void takeDamage(float damage,DamageType damageType)
     {
-        base.takeDamage(damage);
+        base.takeDamage(damage,damageType);
         healthBar.SetHealth(currentHealth);
+    }
+
+    public override void die()
+    {
+        base.die();
+        GameObject.Find("GameLogic").GetComponent<LevelGameLogic>().gameLoss();
     }
 }

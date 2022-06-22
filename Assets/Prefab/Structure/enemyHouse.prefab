@@ -98,7 +98,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4617425010453879493, guid: b46b0e4c3758a8f448fa0ee3022391a2, type: 3}
   m_PrefabInstance: {fileID: 3056649021533876666}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6326689183759074393
+--- !u!114 &5840304384885954606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,14 +107,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7673858346747292543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c9dbf81588f13f4288edf2739868d57, type: 3}
+  m_Script: {fileID: 11500000, guid: 89b1a55ac1c6ba943b1c7d36a1d80efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whereIsDoor: {fileID: 0}
+  whereIsDoor: {fileID: 4211350376464045432}
   hostPrefab: {fileID: 0}
-  peopleInHouse:
-  - enemyPrefab: {fileID: 0}
-    enemyWeapon: {fileID: 0}
-    enemyCount: 0
+  peopleInHouse: []
   isHostInTheHouse: 1
-  rangeToDetected: 20
+  rangeToDetected: 0
+  emitCooldown: 2

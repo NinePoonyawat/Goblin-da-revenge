@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatManagement : MonoBehaviour
+public class StatManagement : MonoBehaviour,ITakeDamageable
 {
     public float maxHealth;
     public float currentHealth;
@@ -19,7 +19,7 @@ public class StatManagement : MonoBehaviour
         defaultColor = sprite.color;
     }
 
-    public virtual void takeDamage(float damage)
+    public virtual void takeDamage(float damage,DamageType damageType)
     {
         currentHealth -= damage;
 

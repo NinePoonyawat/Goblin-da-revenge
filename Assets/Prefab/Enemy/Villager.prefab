@@ -35,6 +35,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3830292800671753004, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ded81f19c566254d90349e374df1f25, type: 2}
     - target: {fileID: 4987933605883440464, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_Controller
       value: 

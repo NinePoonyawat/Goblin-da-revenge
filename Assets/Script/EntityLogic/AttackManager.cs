@@ -20,6 +20,6 @@ public class AttackManager : MonoBehaviour
 
     public void attack(GameObject attackedEntity,int damage)
     {
-        attackedEntity.GetComponent<StatManagement>().takeDamage(damage);
+        attackedEntity.GetComponent<StatManagement>().takeDamage(damage,DamageType.Normal);
     }
 }
