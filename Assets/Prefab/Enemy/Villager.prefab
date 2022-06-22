@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 927555566915223070, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: isFacingRight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 983417614128689914, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: enemyName
       value: Villager
