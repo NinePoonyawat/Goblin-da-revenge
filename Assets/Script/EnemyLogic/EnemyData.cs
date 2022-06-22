@@ -2,32 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyData : MonoBehaviour
+[CreateAssetMenu]
+public class EnemyData : ScriptableObject
 {
     [SerializeField]
     private string enemyName;
-
     [SerializeField]
-    private enemyRace race;
+    private EnemyRace race;
+    [SerializeField]
+    private int EXPAfterKilled;
 
-    public bool isRace(enemyRace compareRace)
-    {
-        return race == compareRace;
-    }
-
-    public string getEnemyName()
+    public string getName()
     {
         return enemyName;
     }
 
-    public enemyRace getRace()
+    public EnemyRace getRace()
     {
         return race;
     }
 
-    public enum enemyRace
+    public int getEXPAfterKilled()
     {
-        Human,
-        Demon
+        return EXPAfterKilled;
     }
+}
+
+public enum EnemyRace
+{
+    Human,
+    Demon
 }

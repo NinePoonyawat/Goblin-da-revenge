@@ -761,13 +761,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9084657536468676677}
-  - component: {fileID: 983417614128689914}
   - component: {fileID: 9084657536468676682}
   - component: {fileID: 9084657536468676679}
   - component: {fileID: 9084657536468676678}
   - component: {fileID: 1042613926703285891}
   - component: {fileID: 557802590725028131}
   - component: {fileID: 927555566915223070}
+  - component: {fileID: 3830292800671753004}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -793,20 +793,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &983417614128689914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9084657536468676680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ada71eb905d44f44fb40958a8a1c433b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyName: Villager
-  race: 0
 --- !u!212 &9084657536468676682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -950,6 +936,19 @@ MonoBehaviour:
   isFacingRight: 0
   isMoving: 0
   isForward: 0
+--- !u!114 &3830292800671753004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084657536468676680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edfbee83587a8940a21370e59622093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 0}
 --- !u!1 &9084657536592060099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26cfcae951b28f4e85b13958e59dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponInHand: {fileID: 11400000, guid: 093c023af77a27f418052d55d0a7d179, type: 2}
+  weaponInHand: {fileID: 0}
   whereIsHand: {fileID: 9084657536342997632}
   GO: {fileID: 0}
   weaponLogic: {fileID: 0}

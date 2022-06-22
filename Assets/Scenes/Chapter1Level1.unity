@@ -590,6 +590,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4afa09a4eb6a414d8670f4080cb62e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &588904290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2008518737774560510, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
+  m_PrefabInstance: {fileID: 2008518737935245113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &630287593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1423,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1990958301, guid: 40c3fa46cf62c2d4f935790907ca176d, type: 3}
+    - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: weaponInHand
+      value: 
+      objectReference: {fileID: 11400000, guid: 093c023af77a27f418052d55d0a7d179, type: 2}
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
       value: Villager
@@ -1466,7 +1475,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1963746666728935779, guid: 10773184783ccf04894229e563f72d99, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 10773184783ccf04894229e563f72d99, type: 3}
 --- !u!4 &1564067596 stripped
 Transform:
@@ -1786,6 +1796,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2008518737774560499, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
   m_PrefabInstance: {fileID: 2008518737935245113}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1893575248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588904290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab09d7647d0aa7a49834034a6789b37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceSystem: {fileID: 11400000, guid: a48a34552896e4847b4bd7455e1bd676, type: 2}
 --- !u!1001 &1899378852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1938,6 +1961,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: weaponInHand
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ac4f30d3070fa644afc9d4874ba43d7, type: 2}
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
       value: Villager (1)
@@ -1986,7 +2013,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1963746666728935779, guid: 10773184783ccf04894229e563f72d99, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 10773184783ccf04894229e563f72d99, type: 3}
 --- !u!1001 &2008518737935245113
 PrefabInstance:
