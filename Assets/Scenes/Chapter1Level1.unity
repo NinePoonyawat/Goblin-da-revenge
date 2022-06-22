@@ -2426,10 +2426,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 217693594}
     m_Modifications:
+    - target: {fileID: 1889887812683439495, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
     - target: {fileID: 2410655958043251083, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: weaponPrefab
       value: 
-      objectReference: {fileID: 6237866447119828, guid: 845f489e122bb724aad16a70acc30895, type: 3}
+      objectReference: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
     - target: {fileID: 3787884861931950040, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2437,7 +2441,7 @@ PrefabInstance:
     - target: {fileID: 7137208153198930261, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: weaponPrefab
       value: 
-      objectReference: {fileID: 6237866447119828, guid: 845f489e122bb724aad16a70acc30895, type: 3}
+      objectReference: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
     - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Enabled
       value: 0
