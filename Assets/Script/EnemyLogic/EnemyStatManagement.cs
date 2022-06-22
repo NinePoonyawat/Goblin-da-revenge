@@ -17,9 +17,9 @@ public class EnemyStatManagement : StatManagement
         EXPAfterKilled = gameObject.GetComponent<MainEnemyLogic>().enemyData.getEXPAfterKilled();
     }
 
-    public override void takeDamage(float damage)
+    public override void takeDamage(float damage,DamageType damageType)
     {
-        base.takeDamage(damage);
+        base.takeDamage(damage,damageType);
         healthBar.SetHealth(currentHealth);
     }
 

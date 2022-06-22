@@ -17,7 +17,7 @@ public class FootHurtedStatusSO : EntityStatusSO
     {
         if (character.allComponent.characterController2D.hasXMove())
         {
-            character.takeDamage(walkingDamage);
+            character.takeDamage(walkingDamage,DamageType.Normal);
         }
     }
 
