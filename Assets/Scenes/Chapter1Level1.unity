@@ -2962,6 +2962,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experienceSystem: {fileID: 11400000, guid: a48a34552896e4847b4bd7455e1bd676, type: 2}
+--- !u!114 &1893575257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588904290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d17e9709f7b8c9449340f1777c9cc9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
+  handPos: {fileID: 2008518737935245114}
+  entityToAttack: 
 --- !u!1001 &1899378852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3232,9 +3247,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayingGoblin
       objectReference: {fileID: 0}
+    - target: {fileID: 2008518739371538024, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5031035033724319123, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
       propertyPath: weaponInHand
       value: 
       objectReference: {fileID: 11400000, guid: 14c87b46794458347917c4faa1080b93, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
+--- !u!4 &2008518737935245114 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2008518738786110798, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
+  m_PrefabInstance: {fileID: 2008518737935245113}
+  m_PrefabAsset: {fileID: 0}

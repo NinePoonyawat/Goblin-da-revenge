@@ -11,7 +11,6 @@ public class ThrowingWeaponLogic : WeaponLogic
     public GameObject bulletPrefab;
 
     public LayerMask entityLayers;
-    private int damage;
 
     private Transform target;
 
@@ -27,7 +26,7 @@ public class ThrowingWeaponLogic : WeaponLogic
         gunPoint.localPosition = ((ThrowingWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).gunPoint;
     }
 
-    public override void attack(string entityToAttack)
+    public override void attack()
     {
         calculateVelocity();
         GameObject GO = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);

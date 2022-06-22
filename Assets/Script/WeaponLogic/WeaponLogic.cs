@@ -4,5 +4,20 @@ using UnityEngine;
 
 public abstract class WeaponLogic : MonoBehaviour
 {
-    public abstract void attack(string entityToAttack);
+    [SerializeField]
+    protected float damage, cooldownTime;
+
+    public string entityToAttack;
+
+    public abstract void attack();
+
+    public float getDamage()
+    {
+        return damage;
+    }
+
+    public float getCooldownTime()
+    {
+        return cooldownTime;
+    }
 }

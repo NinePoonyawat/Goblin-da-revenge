@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
 
     public int projectileDamage;
 
-    public int damage = 0;
+    public float damage = 0;
     public string entityToAttack;
 
     private bool isTriggered = false;

@@ -32,6 +32,7 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
     {
         base.setWeapon(newWeaponInHand);
         thisTransform = gameObject.transform.GetChild(0).GetChild(0).transform;
+        weaponLogic.entityToAttack = "Player";
     }
 
     // Update is called once per frame
@@ -52,7 +53,7 @@ public class EnemyHandlingWeaponManagement : HandlingWeaponManagement
         {
             if (isOnAttackRange)
             {
-                weaponLogic.attack("Player");
+                weaponLogic.attack();
                 attackCooldownCount = weaponInHand.cooldownTime;
                 isOnAttackCooldown = true;
             }
