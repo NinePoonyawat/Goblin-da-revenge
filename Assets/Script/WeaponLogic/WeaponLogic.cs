@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class WeaponLogic : MonoBehaviour
 {
     [SerializeField]
-    protected float damage, cooldownTime;
+    protected float damage, cooldownTime, detectedRange;
 
     public string entityToAttack;
 
@@ -19,5 +19,10 @@ public abstract class WeaponLogic : MonoBehaviour
     public float getCooldownTime()
     {
         return cooldownTime;
+    }
+
+    public float getDetectedRange()
+    {
+        return detectedRange;
     }
 }

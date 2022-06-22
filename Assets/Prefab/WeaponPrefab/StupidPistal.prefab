@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StupidPistal
       objectReference: {fileID: 0}
+    - target: {fileID: 2126775974195322838, guid: 7dcf53e5b9835144fa79284b374b3031, type: 3}
+      propertyPath: detectedRange
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3990817151073492879, guid: 7dcf53e5b9835144fa79284b374b3031, type: 3}
       propertyPath: m_RootOrder
       value: 0

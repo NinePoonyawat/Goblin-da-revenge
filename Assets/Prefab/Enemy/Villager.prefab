@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: isFacingRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8063817155577409894, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8516115012019471044, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -169,3 +173,65 @@ PrefabInstance:
       objectReference: {fileID: 1990958301, guid: 40c3fa46cf62c2d4f935790907ca176d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+--- !u!1 &2164572718766417404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 643864419363587685, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+  m_PrefabInstance: {fileID: 1649843776735994777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7137208153198930261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164572718766417404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e863e4bd06b11d44589affc050c427e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stalkSpeed: 1
+  distance: 0
+  isFacingRight: 1
+  isMoving: 0
+  isForward: 0
+  weaponPrefab: {fileID: 0}
+  handPos: {fileID: 7563307158959315225}
+  attackAlert: {fileID: 7563307157504880062}
+  alertCooldown: 0.5
+--- !u!1 &7563307157504880062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9084657537504218663, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+  m_PrefabInstance: {fileID: 1649843776735994777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7563307158548681681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+  m_PrefabInstance: {fileID: 1649843776735994777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2410655958043251083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563307158548681681}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e863e4bd06b11d44589affc050c427e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stalkSpeed: 1
+  distance: 0
+  isFacingRight: 1
+  isMoving: 0
+  isForward: 0
+  weaponPrefab: {fileID: 0}
+  handPos: {fileID: 7563307158959315225}
+  attackAlert: {fileID: 7563307157504880062}
+  alertCooldown: 0.5
+--- !u!4 &7563307158959315225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9084657536342997632, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+  m_PrefabInstance: {fileID: 1649843776735994777}
+  m_PrefabAsset: {fileID: 0}

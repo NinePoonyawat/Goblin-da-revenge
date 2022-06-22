@@ -19,11 +19,6 @@ public class ThrowingWeaponLogic : WeaponLogic
     void Start()
     {
         target = GameObject.Find("PlayingGoblin").GetComponent<Transform>();
-
-        bulletPrefab = ((ThrowingWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).bulletPrefab;
-        damage = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand.damage;
-
-        gunPoint.localPosition = ((ThrowingWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).gunPoint;
     }
 
     public override void attack()

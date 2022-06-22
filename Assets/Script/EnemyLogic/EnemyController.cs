@@ -9,24 +9,27 @@ public class EnemyController : MonoBehaviour
 
     public float distance;
 
-    private IEnumerator coroutine;
+    protected IEnumerator coroutine;
     
-    private GameObject targetToDetected;
-    private Transform targetTransform;
+    protected GameObject targetToDetected;
+    protected Transform targetTransform;
 
-    private Transform mainTransform;
+    protected Transform mainTransform;
+    protected Transform thisObjectTransform;
 
     public bool isFacingRight = false;
     public bool isMoving = false;
     public bool isForward = false;
 
-    void Start()
+    protected string entityToAttack;
+
+    protected virtual void Start()
     {
+        entityToAttack = "Player";
         targetToDetected = GameObject.Find("PlayingGoblin");
         targetTransform = targetToDetected.transform;
         mainTransform = this.transform.parent.transform;
-
-        Debug.Log(".");
+        thisObjectTransform = this.transform;
 
         if (!isFacingRight && targetTransform.position.x > transform.position.x)
         {
@@ -43,7 +46,7 @@ public class EnemyController : MonoBehaviour
         //StartCoroutine(aggroState());
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (targetToDetected == null)
             return;
