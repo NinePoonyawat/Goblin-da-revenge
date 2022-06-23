@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   cooldownTime: 4
-  detectedRange: 7
+  detectedRange: 10
   entityToAttack: 
   meleeEffectPrefab: {fileID: 1858662819391838142, guid: 2c82e91376626fe44b40507c2774d3d3, type: 3}
   attackPoint: {fileID: 3540108974844743804}

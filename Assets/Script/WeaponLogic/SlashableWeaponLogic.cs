@@ -12,7 +12,7 @@ public class SlashableWeaponLogic : WeaponLogic
     public float attackRange;
     public LayerMask hitLayers;
 
-    void Start()
+    void Awake()
     {
         hitLayers = LayerMask.GetMask("Entity") | LayerMask.GetMask("Shield");
         weaponType = WeaponType.Melee;

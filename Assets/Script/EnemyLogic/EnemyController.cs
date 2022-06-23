@@ -63,13 +63,16 @@ public class EnemyController : MonoBehaviour
     {
         float distance = Math.Abs(targetTransform.position.x - transform.position.x);
         if (enemyBehavior == EnemyBehavior.FaceTarget)
+        {
             if (distance > recommendedRange / 2)
             {
                 isMoving = true;
                 isForward = true;
                 move();
             }
+        }
         else if (enemyBehavior == EnemyBehavior.NibbleTarget)
+        {
             if (distance < recommendedRange / 2)
             {
                 isMoving = true;
@@ -82,6 +85,7 @@ public class EnemyController : MonoBehaviour
                 isForward = true;
                 move();
             }
+        }
     }
 
     protected virtual void move()
@@ -103,7 +107,7 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                moveBackward();
+                moveForward();
             }
         }
     }

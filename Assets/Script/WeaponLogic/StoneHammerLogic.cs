@@ -11,7 +11,7 @@ public class StoneHammerLogic : SlashableWeaponLogic
     [SerializeField]
     protected Vector3 explodeDistance;
 
-    protected void Start()
+    protected void Awake()
     {
         hitLayers = LayerMask.GetMask("Entity") | LayerMask.GetMask("Shield");
         weaponType = WeaponType.Range;

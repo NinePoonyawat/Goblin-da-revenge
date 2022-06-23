@@ -16,10 +16,14 @@ public class ThrowingWeaponLogic : WeaponLogic
 
     private float Xvelocity,Yvelocity;
 
+    void Awake()
+    {
+        weaponType = WeaponType.Range;
+    }
+
     void Start()
     {
         target = GameObject.Find("PlayingGoblin").GetComponent<Transform>();
-        weaponType = WeaponType.Range;
     }
 
     public override void attack()

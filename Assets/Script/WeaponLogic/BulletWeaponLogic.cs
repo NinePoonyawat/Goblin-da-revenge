@@ -11,7 +11,7 @@ public class BulletWeaponLogic : WeaponLogic
 
     public LayerMask entityLayers;
 
-    void Start()
+    void Awake()
     {
         weaponType = WeaponType.Range;
     }
