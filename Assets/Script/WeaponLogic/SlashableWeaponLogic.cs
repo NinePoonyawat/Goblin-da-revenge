@@ -30,7 +30,11 @@ public class SlashableWeaponLogic : WeaponLogic
         {
             if (entity.CompareTag(entityToAttack))
             {
-                entity.GetComponent<StatManagement>().takeDamage(damage,DamageType.Normal);
+                ITakeDamageable attackedEntity = entity.GetComponent<ITakeDamageable>();
+                if (attackedEntity != null)
+                {
+                    attackedEntity.takeDamage(damage,DamageType.Normal);
+                }
             }
         }
     }
