@@ -3037,7 +3037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d17e9709f7b8c9449340f1777c9cc9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 7052429830266300051, guid: 26a385dbd30eb0248ac81691d07bb1ea, type: 3}
+  weaponPrefab: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
   handPos: {fileID: 2008518737935245114}
   entityToAttack: 
 --- !u!1001 &1899378852
