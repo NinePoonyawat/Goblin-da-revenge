@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2864650863375828525}
   - component: {fileID: 3348594988560528815}
   - component: {fileID: 2911342785804183769}
+  - component: {fileID: 344672733549235943}
   m_Layer: 0
   m_Name: Pierce-Effect
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1595561847
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 671840648, guid: c445b5c592b52b7458ec9a6a9bcf8548, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -105,3 +106,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &344672733549235943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468022230683725729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cca0d7f0e9e9f049a741966113df5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetimeDuration: 1

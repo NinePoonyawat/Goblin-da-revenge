@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SlashableWeaponLogic : WeaponLogic
 {
+    public GameObject meleeEffectPrefab;
+
     [SerializeField]
     private Transform attackPoint;
 
@@ -20,6 +22,8 @@ public class SlashableWeaponLogic : WeaponLogic
     public override void attack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, entityLayers);
+
+        Instantiate(meleeEffectPrefab, attackPoint.position, attackPoint.rotation);
 
         foreach(Collider2D entity in hitEnemies)
         {

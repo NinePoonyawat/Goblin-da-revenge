@@ -3,7 +3,9 @@ guid: 6120a6f953abfe947b6351bfd54bbca9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - meleeEffectPrefab: {fileID: 1858662819391838142, guid: 2c82e91376626fe44b40507c2774d3d3, type: 3}
+  - attackPoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
