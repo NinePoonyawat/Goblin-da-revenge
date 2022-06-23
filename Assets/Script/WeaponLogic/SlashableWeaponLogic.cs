@@ -10,10 +10,11 @@ public class SlashableWeaponLogic : WeaponLogic
     private Transform attackPoint;
 
     public float attackRange;
-    public LayerMask entityLayers;
+    public LayerMask hitLayers;
 
     void Start()
     {
+        hitLayers = LayerMask.GetMask("Entity") | LayerMask.GetMask("Shield");
         // attackPoint.localPosition = ((MeleeWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).attackPoint;
         // attackRange = ((SlashableWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).attackRange;
         // damage = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand.damage;
@@ -21,7 +22,7 @@ public class SlashableWeaponLogic : WeaponLogic
 
     public override void attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, entityLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, hitLayers);
 
         Instantiate(meleeEffectPrefab, attackPoint.position, attackPoint.rotation);
 

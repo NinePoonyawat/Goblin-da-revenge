@@ -26,9 +26,13 @@ public class Bullet : MonoBehaviour
     {
         if(entity.CompareTag(entityToAttack) && !isTriggered)
         {
-            entity.GetComponent<StatManagement>().takeDamage(damage,DamageType.Normal);
-            isTriggered = true;
-            Destroy(gameObject);
+            ITakeDamageable attackedEntity = entity.GetComponent<ITakeDamageable>();
+            if (attackedEntity != null)
+            {
+                attackedEntity.takeDamage(damage,DamageType.Normal);
+                isTriggered = true;
+                Destroy(gameObject);
+            }
         }
     }
 
