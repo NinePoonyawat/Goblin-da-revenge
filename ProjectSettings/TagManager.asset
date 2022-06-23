@@ -16,7 +16,7 @@ TagManager:
   - Ground
   - Building
   - Entity
-  - 
+  - Shield
   - 
   - 
   - 
@@ -54,6 +54,9 @@ TagManager:
     locked: 0
   - name: Weapon
     uniqueID: 4077992489
+    locked: 0
+  - name: Shield
+    uniqueID: 1813406597
     locked: 0
   - name: UI
     uniqueID: 2699405449
