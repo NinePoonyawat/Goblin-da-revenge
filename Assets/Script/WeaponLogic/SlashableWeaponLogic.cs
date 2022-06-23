@@ -7,7 +7,7 @@ public class SlashableWeaponLogic : WeaponLogic
     public GameObject meleeEffectPrefab;
 
     [SerializeField]
-    private Transform attackPoint;
+    protected Transform attackPoint;
 
     public float attackRange;
     public LayerMask hitLayers;
