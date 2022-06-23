@@ -15,9 +15,7 @@ public class SlashableWeaponLogic : WeaponLogic
     void Start()
     {
         hitLayers = LayerMask.GetMask("Entity") | LayerMask.GetMask("Shield");
-        // attackPoint.localPosition = ((MeleeWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).attackPoint;
-        // attackRange = ((SlashableWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).attackRange;
-        // damage = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand.damage;
+        weaponType = WeaponType.Melee;
     }
 
     public override void attack()

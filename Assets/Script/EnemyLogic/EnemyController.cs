@@ -20,12 +20,18 @@ public class EnemyController : MonoBehaviour
     public bool isMoving = false;
     public bool isForward = false;
 
+    protected bool isRotatable = true;
+
+    protected EnemyBehavior enemyBehavior = EnemyBehavior.FaceTarget;
+    protected float recommendedRange = 0.1f;
+
     protected string entityToAttack;
 
     protected virtual void Start()
     {
         entityToAttack = "Player";
         targetToDetected = GameObject.Find("PlayingGoblin");
+        enemyBehavior =EnemyBehavior.FaceTarget;
         targetTransform = targetToDetected.transform;
         mainTransform = this.transform.parent.transform;
 
@@ -48,22 +54,37 @@ public class EnemyController : MonoBehaviour
     {
         if (targetToDetected == null)
             return;
+        updateMoving();
         float xDistance = transform.position.x - targetTransform.position.x;
-        if (Math.Abs(targetTransform.position.x - transform.position.x) > 0.1)
-        {
-            updateMoving();
-        }
-        if (isFacingRight && xDistance > 0) {
-            isFacingRight = false;
-            transform.Rotate(0f, 180f, 0f);
-        }
-        if (!isFacingRight && xDistance < 0) {
-            isFacingRight = true;
-            transform.Rotate(0f, 180f, 0f);
-        }
+        UpdateRotating(xDistance);
     }
 
-    public void updateMoving()
+    protected virtual void updateMoving()
+    {
+        float distance = Math.Abs(targetTransform.position.x - transform.position.x);
+        if (enemyBehavior == EnemyBehavior.FaceTarget)
+            if (distance > recommendedRange / 2)
+            {
+                isMoving = true;
+                isForward = true;
+                move();
+            }
+        else if (enemyBehavior == EnemyBehavior.NibbleTarget)
+            if (distance < recommendedRange / 2)
+            {
+                isMoving = true;
+                isForward = false;
+                move();
+            }
+            else if (distance > recommendedRange)
+            {
+                isMoving = true;
+                isForward = true;
+                move();
+            }
+    }
+
+    protected virtual void move()
     {
         if (isMoving && isForward) {
             if (isFacingRight)
@@ -87,6 +108,18 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    protected virtual void UpdateRotating(float xDistance)
+    {
+        if (isFacingRight && xDistance > 0 & isRotatable) {
+            isFacingRight = false;
+            transform.Rotate(0f, 180f, 0f);
+        }
+        if (!isFacingRight && xDistance < 0 & isRotatable) {
+            isFacingRight = true;
+            transform.Rotate(0f, 180f, 0f);
+        }
+    }
+
     public void moveForward()
     {
         mainTransform.position = new Vector2(mainTransform.position.x + Time.deltaTime * stalkSpeed,
@@ -100,9 +133,10 @@ public class EnemyController : MonoBehaviour
              mainTransform.position.y);
         distance = Vector3.Distance(targetTransform.position, transform.position);
     }
+}
 
-    // public void updateAfterAttack()
-    // {
-    //     StartCoroutine(fleeState);
-    // }
+public enum EnemyBehavior
+{
+    FaceTarget,
+    NibbleTarget,
 }

@@ -13,10 +13,7 @@ public class BulletWeaponLogic : WeaponLogic
 
     void Start()
     {
-        //damage = gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand.damage;
-        //entityToAttack = gameObject.GetComponent<PlayerWeaponLogic>().entityToAttack;
-
-        //gunPoint.localPosition = ((BulletWeapon) gameObject.transform.parent.gameObject.GetComponent<HandlingWeaponManagement>().weaponInHand).gunPoint;
+        weaponType = WeaponType.Range;
     }
 
     public override void attack()

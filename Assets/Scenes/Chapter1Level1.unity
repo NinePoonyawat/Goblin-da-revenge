@@ -831,6 +831,10 @@ PrefabInstance:
       propertyPath: weaponPrefab
       value: 
       objectReference: {fileID: 3321368777388908632, guid: bfb2f217ea399aa4299380d4403efcab, type: 3}
+    - target: {fileID: 2767456953608112968, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3787884861931950040, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -850,7 +854,7 @@ PrefabInstance:
     - target: {fileID: 7137208153198930261, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: weaponPrefab
       value: 
-      objectReference: {fileID: 3321368777388908632, guid: bfb2f217ea399aa4299380d4403efcab, type: 3}
+      objectReference: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
     - target: {fileID: 7563307157905753538, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2458,6 +2462,10 @@ PrefabInstance:
       propertyPath: weaponPrefab
       value: 
       objectReference: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
+    - target: {fileID: 2814409426020227296, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3787884861931950040, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

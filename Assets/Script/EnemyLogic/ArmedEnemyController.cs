@@ -20,10 +20,10 @@ public class ArmedEnemyController : EnemyController
 
     [SerializeField]
     protected GameObject attackAlert;
+    protected bool isOnAlertCooldown = false;
 
     public float alertCooldown = .5f;
     private float alertCooldownCount = 0;
-    private bool isOnAlertCooldown = false;
 
     private bool hasAttack = false;
 
@@ -54,16 +54,15 @@ public class ArmedEnemyController : EnemyController
                 attackAlert.SetActive(true);
                 alertCooldownCount = alertCooldown;
                 isOnAlertCooldown = true;
+                isRotatable = false;
             }
         if (hasAttack)
         {
-            if (isOnAttackRange)
-            {
-                weaponLogic.attack();
-                attackCooldownCount = weaponPrefab.GetComponent<WeaponLogic>().getCooldownTime();
-                isOnAttackCooldown = true;
-            }
+            weaponLogic.attack();
+            attackCooldownCount = weaponPrefab.GetComponent<WeaponLogic>().getCooldownTime();
+            isOnAttackCooldown = true;
             hasAttack = false;
+            isRotatable = true;
         }
     }
 
@@ -101,9 +100,6 @@ public class ArmedEnemyController : EnemyController
         // weaponInHand = newWeaponInHand;
         this.weaponPrefab = weaponPrefab;
         isWeaponInHand = true;
-        // gameObject.GetComponent<SpriteRenderer>().sprite = newWeaponInHand.image;
-        // gameObject.transform.localScale = new Vector3(newWeaponInHand.size, newWeaponInHand.size, 1);
-        // gameObject.transform.localPosition = newWeaponInHand.pickPosition;
 
         GO = Instantiate(weaponPrefab) as GameObject;
         GO.transform.SetParent(handPos);
@@ -112,15 +108,21 @@ public class ArmedEnemyController : EnemyController
         Vector3 distanceToMove = GO.transform.Find("HandlePos").position - handPos.position;
         GO.transform.position -= distanceToMove;
         weaponTransform = GO.transform;
-        //GO.transform.Find("HandlePos").position = handPos.position;
         GO.GetComponent<WeaponLogic>().entityToAttack = "Player";
-        // if (gameObject.transform.parent.parent.gameObject.GetComponent<SpriteRenderer>().flipX)
-        // {
-        //     Debug.Log("do this line");
-        //     GO.transform.Rotate(0, 180, 0);
-        // }
 
         weaponLogic = GO.GetComponent<WeaponLogic>();
+
+        recommendedRange = weaponLogic.getDetectedRange();
+        WeaponType weaponType = weaponLogic.getWeaponType();
+        switch (weaponType)
+        {
+            case WeaponType.Range:
+                enemyBehavior = EnemyBehavior.NibbleTarget;
+                break;
+            default:
+                enemyBehavior = EnemyBehavior.FaceTarget;
+                break;
+        }
     }
 
     public void releaseCurrentWeapon()

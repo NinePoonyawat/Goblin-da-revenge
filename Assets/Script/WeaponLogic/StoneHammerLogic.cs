@@ -11,6 +11,12 @@ public class StoneHammerLogic : SlashableWeaponLogic
     [SerializeField]
     protected Vector3 explodeDistance;
 
+    protected void Start()
+    {
+        hitLayers = LayerMask.GetMask("Entity") | LayerMask.GetMask("Shield");
+        weaponType = WeaponType.Range;
+    }
+
     public override void attack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, hitLayers);

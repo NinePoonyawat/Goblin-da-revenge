@@ -19,6 +19,7 @@ public class ThrowingWeaponLogic : WeaponLogic
     void Start()
     {
         target = GameObject.Find("PlayingGoblin").GetComponent<Transform>();
+        weaponType = WeaponType.Range;
     }
 
     public override void attack()

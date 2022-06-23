@@ -9,6 +9,8 @@ public abstract class WeaponLogic : MonoBehaviour
 
     public string entityToAttack;
 
+    protected WeaponType weaponType;
+
     public abstract void attack();
 
     public float getDamage()
@@ -25,4 +27,15 @@ public abstract class WeaponLogic : MonoBehaviour
     {
         return detectedRange;
     }
+
+    public WeaponType getWeaponType()
+    {
+        return weaponType;
+    }
+}
+
+public enum WeaponType
+{
+    Melee,
+    Range
 }
