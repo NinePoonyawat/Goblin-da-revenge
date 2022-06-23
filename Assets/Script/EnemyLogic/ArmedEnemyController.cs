@@ -43,7 +43,7 @@ public class ArmedEnemyController : EnemyController
     {
         base.Update();
 
-        if (!isWeaponInHand)
+        if (GO == null)
             return;
         if (targetToDetected == null)
             return;
@@ -99,18 +99,19 @@ public class ArmedEnemyController : EnemyController
             return;
         }
         // weaponInHand = newWeaponInHand;
+        this.weaponPrefab = weaponPrefab;
         isWeaponInHand = true;
         // gameObject.GetComponent<SpriteRenderer>().sprite = newWeaponInHand.image;
         // gameObject.transform.localScale = new Vector3(newWeaponInHand.size, newWeaponInHand.size, 1);
         // gameObject.transform.localPosition = newWeaponInHand.pickPosition;
 
-        GameObject GO = Instantiate(weaponPrefab) as GameObject;
+        GO = Instantiate(weaponPrefab) as GameObject;
         GO.transform.SetParent(handPos);
-        GO.transform.rotation = thisObjectTransform.rotation;
+        GO.transform.rotation = this.transform.rotation;
 
         Vector3 distanceToMove = GO.transform.Find("HandlePos").position - handPos.position;
-        weaponTransform = GO.transform;
         GO.transform.position -= distanceToMove;
+        weaponTransform = GO.transform;
         //GO.transform.Find("HandlePos").position = handPos.position;
         GO.GetComponent<WeaponLogic>().entityToAttack = "Player";
         // if (gameObject.transform.parent.parent.gameObject.GetComponent<SpriteRenderer>().flipX)

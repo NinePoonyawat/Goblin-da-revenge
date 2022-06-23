@@ -15,7 +15,6 @@ public class EnemyController : MonoBehaviour
     protected Transform targetTransform;
 
     protected Transform mainTransform;
-    protected Transform thisObjectTransform;
 
     public bool isFacingRight = false;
     public bool isMoving = false;
@@ -29,7 +28,6 @@ public class EnemyController : MonoBehaviour
         targetToDetected = GameObject.Find("PlayingGoblin");
         targetTransform = targetToDetected.transform;
         mainTransform = this.transform.parent.transform;
-        thisObjectTransform = this.transform;
 
         if (!isFacingRight && targetTransform.position.x > transform.position.x)
         {

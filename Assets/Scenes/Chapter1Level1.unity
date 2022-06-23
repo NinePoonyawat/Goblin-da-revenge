@@ -825,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 3321368777388908632, guid: bfb2f217ea399aa4299380d4403efcab, type: 3}
     - target: {fileID: 3787884861931950040, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7137208153198930261, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: weaponPrefab
@@ -838,6 +838,10 @@ PrefabInstance:
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
       value: Villager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7563307158548681692, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_RootOrder
@@ -2436,7 +2440,7 @@ PrefabInstance:
       objectReference: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
     - target: {fileID: 3787884861931950040, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7137208153198930261, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: weaponPrefab
@@ -2449,6 +2453,10 @@ PrefabInstance:
     - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_Name
       value: Villager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7563307158548681692, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_RootOrder
@@ -2535,7 +2543,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyWeapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7052429830266300051, guid: 26a385dbd30eb0248ac81691d07bb1ea, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyPrefab
       value: 
@@ -2543,7 +2551,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyWeapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6237866447119828, guid: 845f489e122bb724aad16a70acc30895, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[2].enemyPrefab
       value: 
@@ -2551,7 +2559,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[2].enemyWeapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
     - target: {fileID: 6326689183759074393, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: hostPrefab
       value: 
@@ -2658,7 +2666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7673858346747292543, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
