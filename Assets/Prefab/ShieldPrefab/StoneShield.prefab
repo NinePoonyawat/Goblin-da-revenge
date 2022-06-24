@@ -9,16 +9,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3042988482550202183, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_Size.x
-      value: 0.32
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: -3042988482550202183, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_Size.y
-      value: 0.32
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: -3042988482550202183, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ea9459423db2d3c4e81085b64f19cb35, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e649f9b5cfcd184097c914f5ff8ec02, type: 3}
     - target: {fileID: -3042988482550202183, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -29,11 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5035899613278691611, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5035899613278691611, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5035899613278691611, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,19 +77,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5737867040168726701, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_Size.x
-      value: 0.12831096
+      value: 0.76572067
       objectReference: {fileID: 0}
     - target: {fileID: 5737867040168726701, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_Size.y
-      value: 0.30480337
+      value: 1.9182465
       objectReference: {fileID: 0}
     - target: {fileID: 5737867040168726701, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_Offset.x
-      value: 0.014140328
+      value: -0.058896214
       objectReference: {fileID: 0}
     - target: {fileID: 5737867040168726701, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: m_Offset.y
-      value: 0.0028727055
+      value: -0.00044715405
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549389782351426047, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8679297914557837699, guid: b875b010e39737849b64d2b9225f7cb9, type: 3}
       propertyPath: maxHealth
