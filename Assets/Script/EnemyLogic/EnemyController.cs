@@ -6,6 +6,7 @@ using System;
 public class EnemyController : MonoBehaviour
 {
     public float stalkSpeed;
+    public float visionDistance;
 
     public float distance;
 
@@ -62,9 +63,13 @@ public class EnemyController : MonoBehaviour
     protected virtual void updateMoving()
     {
         float distance = Math.Abs(targetTransform.position.x - transform.position.x);
+        
+        //TEST | Vision Check
+        if (distance > visionDistance) return;
+
         if (enemyBehavior == EnemyBehavior.FaceTarget)
         {
-            if (distance > recommendedRange / 2)
+            if (distance > recommendedRange / 2 )
             {
                 isMoving = true;
                 isForward = true;

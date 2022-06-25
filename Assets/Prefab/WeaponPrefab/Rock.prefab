@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544984730226701017, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_Name
-      value: ViskyBottle
+      value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 6756810451155653667, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_Size.x
@@ -38,26 +38,26 @@ PrefabInstance:
     - target: {fileID: 6756810451155653667, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1e45b447586843349ac786c97df97085, type: 3}
+      objectReference: {fileID: 21300000, guid: 44f279ee28f223440bd544d607e2cf9a, type: 3}
     - target: {fileID: 6756810451155653667, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6904718478463053119, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: damage
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6904718478463053119, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 5998023300151107643, guid: 5a26a16d6fdf5c44a917030f36fac8c3, type: 3}
+      objectReference: {fileID: 5998023300151107643, guid: 764b08dadb205124081d19e6d7524aaa, type: 3}
     - target: {fileID: 6904718478463053119, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: cooldownTime
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6904718478463053119, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: detectedRange
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7875945075658570157, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_RootOrder
@@ -65,11 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7875945075658570157, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7875945075658570157, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7875945075658570157, guid: 3335631186dd67d4096eef958cd472de, type: 3}
       propertyPath: m_LocalPosition.x

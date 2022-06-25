@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stalkSpeed: 1
+  visionDistance: 10
   distance: 0
   isFacingRight: 1
   isMoving: 0
