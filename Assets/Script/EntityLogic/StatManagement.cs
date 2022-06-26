@@ -15,7 +15,6 @@ public class StatManagement : MonoBehaviour,ITakeDamageable
     protected virtual void Start()
     {
         currentHealth = maxHealth;
-
         defaultColor = sprite.color;
     }
 

@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 8516115012019471044}
   - component: {fileID: 4987933605883440464}
   - component: {fileID: 8063817155577409894}
+  - component: {fileID: 7181021026409921589}
   m_Layer: 0
   m_Name: EnemyObject
   m_TagString: Untagged
@@ -192,13 +193,38 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643864419363587685}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff01154edf2e5641b37897a783051a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stalkSpeed: 1
+  visionDistance: 0
   distance: 0
+  isFacingRight: 0
+  isMoving: 0
+  isForward: 0
+--- !u!114 &7181021026409921589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643864419363587685}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b490734835f098c42b5e7732cf930679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Villager
+  stalkSpeed: 1
+  visionDistance: 0
+  maxHealth: 50
+  currentHealth: 0
+  sprite: {fileID: 8516115012019471044}
+  healthBar: {fileID: 1296526617254807613}
+  distance: 0
+  objectTransform: {fileID: 0}
   isFacingRight: 0
   isMoving: 0
   isForward: 0
@@ -761,8 +787,8 @@ GameObject:
   - component: {fileID: 9084657536468676682}
   - component: {fileID: 9084657536468676679}
   - component: {fileID: 9084657536468676678}
-  - component: {fileID: 1042613926703285891}
   - component: {fileID: 557802590725028131}
+  - component: {fileID: 4661057958936069690}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -877,24 +903,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.07505214, y: 0}
   m_Size: {x: 1.0230439, y: 2.88}
   m_Direction: 0
---- !u!114 &1042613926703285891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9084657536468676680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27da62a94922724a8c7dcd902ef7f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  currentHealth: 0
-  sprite: {fileID: 8516115012019471044}
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  allComponent: {fileID: 0}
-  healthBar: {fileID: 1296526617254807613}
 --- !u!114 &557802590725028131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +918,34 @@ MonoBehaviour:
   characterTransform: {fileID: 0}
   characterController2D: {fileID: 0}
   playerMovement: {fileID: 0}
+--- !u!114 &4661057958936069690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084657536468676680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c369bcfea5ce96c4d8cf4604a064bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Villager
+  stalkSpeed: 1
+  visionDistance: 0
+  maxHealth: 50
+  currentHealth: 0
+  sprite: {fileID: 8516115012019471044}
+  healthBar: {fileID: 1296526617254807613}
+  distance: 0
+  objectTransform: {fileID: 8861367565087597146}
+  isFacingRight: 1
+  isMoving: 0
+  isForward: 0
+  weaponPrefab: {fileID: 0}
+  handPos: {fileID: 9084657536342997632}
+  attackAlert: {fileID: 9084657537504218663}
+  alertCooldown: 0.5
 --- !u!1 &9084657536592060099
 GameObject:
   m_ObjectHideFlags: 0

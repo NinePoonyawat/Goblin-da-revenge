@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour,ITakeDamageable
     public float stalkSpeed;
     public float visionDistance;
     [SerializeField] private float maxHealth,currentHealth;
-    private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer sprite;
     private Color defaultColor;
     public HealthBar healthBar;
 
@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour,ITakeDamageable
     protected Transform targetTransform;
 
     protected Transform mainTransform;
+    [SerializeField] protected Transform objectTransform;
 
     public bool isFacingRight = false;
     public bool isMoving = false;
@@ -41,14 +42,14 @@ public class Enemy : MonoBehaviour,ITakeDamageable
         targetToDetected = GameObject.Find("PlayingGoblin");
         enemyBehavior =EnemyBehavior.FaceTarget;
         targetTransform = targetToDetected.transform;
-        mainTransform = this.transform.parent.transform;
+        mainTransform = this.transform;
 
-        if (!isFacingRight && targetTransform.position.x > transform.position.x)
+        if (!isFacingRight && targetTransform.position.x > objectTransform.position.x)
         {
             isFacingRight = true;
             transform.Rotate(0f, 180f, 0f);
         }
-        else if (isFacingRight && targetTransform.position.x < transform.position.x)
+        else if (isFacingRight && targetTransform.position.x < objectTransform.position.x)
         {
             isFacingRight = false;
             transform.Rotate(0f, 180f ,0f);
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour,ITakeDamageable
 
         currentHealth = maxHealth;
         defaultColor = sprite.color;
+        healthBar.SetMaxHealth(maxHealth);
         //StartCoroutine(aggroState());
     }
 
@@ -66,13 +68,13 @@ public class Enemy : MonoBehaviour,ITakeDamageable
         if (targetToDetected == null)
             return;
         updateMoving();
-        float xDistance = transform.position.x - targetTransform.position.x;
+        float xDistance = objectTransform.position.x - targetTransform.position.x;
         UpdateRotating(xDistance);
     }
 
     protected virtual void updateMoving()
     {
-        float distance = Math.Abs(targetTransform.position.x - transform.position.x);
+        float distance = Math.Abs(targetTransform.position.x - objectTransform.position.x);
         
         //TEST | Vision Check
         if (distance > visionDistance) return;

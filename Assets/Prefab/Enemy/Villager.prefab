@@ -43,6 +43,10 @@ PrefabInstance:
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: 2ded81f19c566254d90349e374df1f25, type: 2}
+    - target: {fileID: 4982131053696438400, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4987933605883440464, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_Controller
       value: 
@@ -174,11 +178,50 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8063817155577409894, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+--- !u!114 &512104389909097380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1296526617254807613, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+  m_PrefabInstance: {fileID: 1649843776735994777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdeb1b40c8cd2604aaca837a7b1b270f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2164572718766417404 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 643864419363587685, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
   m_PrefabInstance: {fileID: 1649843776735994777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &697742070636360392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164572718766417404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c369bcfea5ce96c4d8cf4604a064bb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Villager
+  stalkSpeed: 1
+  visionDistance: 0
+  maxHealth: 50
+  currentHealth: 0
+  sprite: {fileID: 0}
+  healthBar: {fileID: 512104389909097380}
+  distance: 0
+  objectTransform: {fileID: 0}
+  isFacingRight: 0
+  isMoving: 0
+  isForward: 0
+  weaponPrefab: {fileID: 0}
+  handPos: {fileID: 7563307158959315225}
+  attackAlert: {fileID: 7563307157504880062}
+  alertCooldown: 0.5
 --- !u!114 &7137208153198930261
 MonoBehaviour:
   m_ObjectHideFlags: 0
