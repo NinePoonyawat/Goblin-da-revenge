@@ -105,7 +105,7 @@ public class ArmedEnemy : Enemy
 
         GO = Instantiate(weaponPrefab) as GameObject;
         GO.transform.SetParent(handPos);
-        GO.transform.rotation = this.transform.rotation;
+        GO.transform.rotation = objectTransform.rotation;
 
         Vector3 distanceToMove = GO.transform.Find("HandlePos").position - handPos.position;
         GO.transform.position -= distanceToMove;

@@ -47,12 +47,12 @@ public class Enemy : MonoBehaviour,ITakeDamageable
         if (!isFacingRight && targetTransform.position.x > objectTransform.position.x)
         {
             isFacingRight = true;
-            transform.Rotate(0f, 180f, 0f);
+            objectTransform.Rotate(0f, 180f, 0f);
         }
         else if (isFacingRight && targetTransform.position.x < objectTransform.position.x)
         {
             isFacingRight = false;
-            transform.Rotate(0f, 180f ,0f);
+            objectTransform.Rotate(0f, 180f ,0f);
         }
         isForward = true;
         isMoving = true;
@@ -133,11 +133,11 @@ public class Enemy : MonoBehaviour,ITakeDamageable
     {
         if (isFacingRight && xDistance > 0 & isRotatable) {
             isFacingRight = false;
-            transform.Rotate(0f, 180f, 0f);
+            objectTransform.Rotate(0f, 180f, 0f);
         }
         if (!isFacingRight && xDistance < 0 & isRotatable) {
             isFacingRight = true;
-            transform.Rotate(0f, 180f, 0f);
+            objectTransform.Rotate(0f, 180f, 0f);
         }
     }
 

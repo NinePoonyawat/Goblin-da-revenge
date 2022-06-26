@@ -87,8 +87,6 @@ GameObject:
   - component: {fileID: 8861367565087597146}
   - component: {fileID: 8516115012019471044}
   - component: {fileID: 4987933605883440464}
-  - component: {fileID: 8063817155577409894}
-  - component: {fileID: 7181021026409921589}
   m_Layer: 0
   m_Name: EnemyObject
   m_TagString: Untagged
@@ -186,48 +184,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8063817155577409894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643864419363587685}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff01154edf2e5641b37897a783051a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stalkSpeed: 1
-  visionDistance: 0
-  distance: 0
-  isFacingRight: 0
-  isMoving: 0
-  isForward: 0
---- !u!114 &7181021026409921589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643864419363587685}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b490734835f098c42b5e7732cf930679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyName: Villager
-  stalkSpeed: 1
-  visionDistance: 0
-  maxHealth: 50
-  currentHealth: 0
-  sprite: {fileID: 8516115012019471044}
-  healthBar: {fileID: 1296526617254807613}
-  distance: 0
-  objectTransform: {fileID: 0}
-  isFacingRight: 0
-  isMoving: 0
-  isForward: 0
 --- !u!1 &1182661928468734827
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +666,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
