@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class EnemyController : MonoBehaviour
+public class Enemy : MonoBehaviour,ITakeDamageable
 {
+    [Header("Enemy Data")]
+    [SerializeField] private string enemyName;
+
+    [Header("Enemy Status")]
     public float stalkSpeed;
     public float visionDistance;
+    [SerializeField] private float maxHealth,currentHealth;
+    private SpriteRenderer sprite;
+    private Color defaultColor;
+    public HealthBar healthBar;
 
     public float distance;
 
@@ -20,7 +28,6 @@ public class EnemyController : MonoBehaviour
     public bool isFacingRight = false;
     public bool isMoving = false;
     public bool isForward = false;
-
     protected bool isRotatable = true;
 
     protected EnemyBehavior enemyBehavior = EnemyBehavior.FaceTarget;
@@ -48,6 +55,9 @@ public class EnemyController : MonoBehaviour
         }
         isForward = true;
         isMoving = true;
+
+        currentHealth = maxHealth;
+        defaultColor = sprite.color;
         //StartCoroutine(aggroState());
     }
 
@@ -142,4 +152,36 @@ public class EnemyController : MonoBehaviour
              mainTransform.position.y);
         distance = Vector3.Distance(targetTransform.position, transform.position);
     }
+
+    public virtual void takeDamage(float damage,DamageType damageType)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            die();
+        }
+
+        StartCoroutine(flashRed());
+
+        healthBar.SetHealth(currentHealth);
+    }
+
+    public virtual void die()
+    {
+        Destroy(gameObject);
+    }
+
+    public IEnumerator flashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = defaultColor;
+    }
+}
+
+public enum EnemyBehavior
+{
+    FaceTarget,
+    NibbleTarget,
 }
