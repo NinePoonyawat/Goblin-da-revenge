@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4838102516760997555}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: HandlePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: -3042988482550202183}
   - component: {fileID: 7549389782351426047}
   - component: {fileID: 5737867040168726701}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Shield
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  handlePos: {fileID: 4838102516760997555}
+  currentHealth: 0
 --- !u!212 &-3042988482550202183
 SpriteRenderer:
   m_ObjectHideFlags: 0

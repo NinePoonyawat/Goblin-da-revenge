@@ -37,12 +37,16 @@ public class Player : MonoBehaviour,ITakeDamageable
 
     protected Transform mainTransform;
 
-    void Start()
+    void Awake()
     {
         defaultRunSpeed = runSpeed;
 
         currentHealth = maxHealth;
         defaultColor = sprite.color;
+    }
+
+    void Start()
+    {
 
         healthBar.SetMaxHealth(maxHealth);
 
@@ -64,7 +68,7 @@ public class Player : MonoBehaviour,ITakeDamageable
         {
             jump = true;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !isOnAttackCooldown)
+        if (Input.GetButtonDown("NormalAttack") && !isOnAttackCooldown)
         {
             weaponLogic.attack();
             attackCooldownCount = weaponPrefab.GetComponent<WeaponLogic>().getCooldownTime();

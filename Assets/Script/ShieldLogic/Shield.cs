@@ -9,13 +9,13 @@ public class Shield : MonoBehaviour,ITakeDamageable
 
     public float currentHealth;
 
-    [SerializeField]
-    private Transform handlePos;
+    private bool isDestroyed;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;    
+        currentHealth = maxHealth;
+        isDestroyed = false;    
     }
 
     public virtual void takeDamage(float damage,DamageType damageType)
@@ -24,7 +24,17 @@ public class Shield : MonoBehaviour,ITakeDamageable
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            isDestroyed = true;
         }
+    }
+
+    public float getMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public bool getIsDestroyed()
+    {
+        return isDestroyed;
     }
 }
