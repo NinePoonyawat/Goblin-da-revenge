@@ -6,7 +6,7 @@ public class Player : MonoBehaviour,ITakeDamageable
 {
     [SerializeField]
     [Header("Player Status")]
-    private CharacterController2D controller;
+    public CharacterController2D controller;
     public float runSpeed = 40f;
     private float defaultRunSpeed;
     [SerializeField] private float maxHealth;
@@ -18,8 +18,6 @@ public class Player : MonoBehaviour,ITakeDamageable
 
     float horizontalMove = 0f;
     bool jump = false;
-
-    public ComponentHandler allComponent;
 
     [Header("Weapon Management")]
     [SerializeField]

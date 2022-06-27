@@ -13,15 +13,15 @@ public class EntityStatusSO : ScriptableObject
     [SerializeField]
     private float cooldown;
 
-    public virtual void statusStart(StatManagement character)
+    public virtual void statusStart(Player character)
     {
     }
 
-    public virtual void action(StatManagement character)
+    public virtual void action(Player character)
     {
     }
 
-    public virtual void statusFinish(StatManagement character)
+    public virtual void statusFinish(Player character)
     {
     }
 

@@ -16,8 +16,9 @@ public class BrokenGlass : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Player attackedEntity = collision.GetComponent<Player>();
             EntityStatus status = collision.gameObject.AddComponent<EntityStatus>() as EntityStatus;
-            status.initial(entityStatus,collision.gameObject.GetComponent<StatManagement>());
+            status.initial(entityStatus,attackedEntity);
             Destroy(gameObject);
         }
     }

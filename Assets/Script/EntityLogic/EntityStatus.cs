@@ -9,7 +9,7 @@ public class EntityStatus : MonoBehaviour
     [SerializeField]
     private EntityStatusSO entityStatus;
     [SerializeField]
-    private StatManagement statManagement;
+    private Player statManagement;
 
     public bool isInfinite;
     public float cooldown;
@@ -35,7 +35,7 @@ public class EntityStatus : MonoBehaviour
         cooldownCounter -= Time.deltaTime;
     }
 
-    public void initial(EntityStatusSO entityStatus,StatManagement statManagement)
+    public void initial(EntityStatusSO entityStatus,Player statManagement)
     {
         this.entityStatus = entityStatus;
         this.statManagement = statManagement;
