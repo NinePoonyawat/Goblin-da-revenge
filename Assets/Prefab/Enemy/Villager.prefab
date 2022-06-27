@@ -43,6 +43,10 @@ PrefabInstance:
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: 2ded81f19c566254d90349e374df1f25, type: 2}
+    - target: {fileID: 4661057958936069690, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 6237866447119828, guid: 845f489e122bb724aad16a70acc30895, type: 3}
     - target: {fileID: 4982131053696438400, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -109,15 +113,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.919096
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.43569362
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.04189793
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -125,15 +129,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9084657536468676677, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -201,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2164572718766417404}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c369bcfea5ce96c4d8cf4604a064bb37, type: 3}
   m_Name: 
@@ -211,14 +215,14 @@ MonoBehaviour:
   visionDistance: 0
   maxHealth: 50
   currentHealth: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 6974454420481646941}
   healthBar: {fileID: 512104389909097380}
   distance: 0
   objectTransform: {fileID: 0}
-  isFacingRight: 0
+  isFacingRight: 1
   isMoving: 0
   isForward: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6237866447119828, guid: 845f489e122bb724aad16a70acc30895, type: 3}
   handPos: {fileID: 7563307158959315225}
   attackAlert: {fileID: 7563307157504880062}
   alertCooldown: 0.5
@@ -229,7 +233,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2164572718766417404}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e863e4bd06b11d44589affc050c427e9, type: 3}
   m_Name: 
@@ -240,10 +244,15 @@ MonoBehaviour:
   isFacingRight: 1
   isMoving: 0
   isForward: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6237866447119828, guid: 845f489e122bb724aad16a70acc30895, type: 3}
   handPos: {fileID: 7563307158959315225}
   attackAlert: {fileID: 7563307157504880062}
   alertCooldown: 0.5
+--- !u!212 &6974454420481646941 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8516115012019471044, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+  m_PrefabInstance: {fileID: 1649843776735994777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7563307157504880062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9084657537504218663, guid: e6e3b1d062068864382d469a087aee7b, type: 3}

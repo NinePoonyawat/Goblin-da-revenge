@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     public int projectileDamage;
 
     public float damage = 0;
-    public string entityToAttack;
+    public string entityToAttack = "";
 
     private bool isTriggered = false;
 
@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if(entity.CompareTag(entityToAttack) && !isTriggered)
         {
+            Debug.Log("attack!");
             ITakeDamageable attackedEntity = entity.GetComponent<ITakeDamageable>();
             if (attackedEntity != null)
             {

@@ -548,7 +548,7 @@ MonoBehaviour:
   isFacingRight: 1
   isMoving: 0
   isForward: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6237866447119828, guid: 953f9402eb05d0e4e92cb2d7bc1d02b1, type: 3}
   handPos: {fileID: 3186955389671626657}
   attackAlert: {fileID: 3186955390917796614}
   alertCooldown: 0.5
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 1662333766565232753}
   m_Layer: 0
   m_Name: EnemyObject
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,6 +1071,10 @@ PrefabInstance:
     - target: {fileID: 7597251079854352605, guid: 80d2bacc9f30a514589107b63696c6ed, type: 3}
       propertyPath: m_Name
       value: StoneShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597251079854352605, guid: 80d2bacc9f30a514589107b63696c6ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80d2bacc9f30a514589107b63696c6ed, type: 3}
