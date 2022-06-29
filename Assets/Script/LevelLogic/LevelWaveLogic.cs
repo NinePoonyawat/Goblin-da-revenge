@@ -63,6 +63,7 @@ public class LevelWaveLogic : MonoBehaviour
                 }
             }
             gameWaveStatus = GameWaveStatus.FLEE;
+            startNextWave();
         }
     }
 
@@ -79,6 +80,8 @@ public class LevelWaveLogic : MonoBehaviour
         foreach (var obstacle in waveObstacle)
         {
             obstacle.SetActive(true);
+            Behaviour waveObstacleObject = (Behaviour) obstacle.GetComponent<IWaveObstacle>();
+            waveObstacleObject.enabled = true;
         }
     }
 
