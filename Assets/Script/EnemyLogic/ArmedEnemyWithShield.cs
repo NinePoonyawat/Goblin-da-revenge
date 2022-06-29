@@ -15,6 +15,16 @@ public class ArmedEnemyWithShield : ArmedEnemy
     private GameObject shieldGO;
     private Shield shieldLogic;
 
+    [Header("Shield UI")]
+    [SerializeField]
+    private GameObject shieldHealthBarUI;
+    private HealthBar shieldHealthBar;
+
+    protected void Awake()
+    {
+        shieldHealthBar = shieldHealthBarUI.GetComponent<HealthBar>();
+    }
+
     protected override void Start()
     {
         base.Start();
@@ -37,11 +47,13 @@ public class ArmedEnemyWithShield : ArmedEnemy
         else
         {
             shieldLogic.takeDamage(damage,damageType);
+            shieldHealthBar.SetHealth(shieldLogic.getCurrentHealth());
             if (shieldLogic.getIsDestroyed())
             {
                 isShieldExist = false;
                 Destroy(shieldGO);
                 shieldLogic = null;
+                shieldHealthBarUI.SetActive(false);
             }
         }
     }
@@ -62,5 +74,8 @@ public class ArmedEnemyWithShield : ArmedEnemy
 
         Vector3 distanceToMove = shieldGO.transform.Find("HandlePos").position - handPos2.position;
         shieldGO.transform.position -= distanceToMove;
+
+        shieldHealthBarUI.SetActive(true);
+        shieldHealthBar.SetMaxHealth(shieldLogic.getMaxHealth());
     }
 }

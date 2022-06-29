@@ -292,7 +292,7 @@ MonoBehaviour:
     m_Top: 320
     m_Bottom: 0
   m_ChildAlignment: 7
-  m_Spacing: 0
+  m_Spacing: -10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -759,6 +759,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2165761807304712477}
     m_Modifications:
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.ctime1
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.key0.r
+      value: 0.6792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.key1.g
+      value: 0.6383668
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463125914431633722, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: gradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749703518794943732, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749703518794943732, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749703518794943732, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5849056
+      objectReference: {fileID: 0}
     - target: {fileID: 2055110875996332617, guid: 66ba82a07c6ab484790971f503f4fc73, type: 3}
       propertyPath: m_Name
       value: HealthBar

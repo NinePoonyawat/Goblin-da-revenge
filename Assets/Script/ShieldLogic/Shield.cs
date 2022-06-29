@@ -33,6 +33,11 @@ public class Shield : MonoBehaviour,ITakeDamageable
         return maxHealth;
     }
 
+    public float getCurrentHealth()
+    {
+        return currentHealth;
+    }
+
     public bool getIsDestroyed()
     {
         return isDestroyed;
