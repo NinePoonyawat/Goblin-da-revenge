@@ -28,6 +28,14 @@ PrefabInstance:
       value: StupidPistal
       objectReference: {fileID: 0}
     - target: {fileID: 2126775974195322838, guid: 7dcf53e5b9835144fa79284b374b3031, type: 3}
+      propertyPath: damage
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126775974195322838, guid: 7dcf53e5b9835144fa79284b374b3031, type: 3}
+      propertyPath: cooldownTime
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126775974195322838, guid: 7dcf53e5b9835144fa79284b374b3031, type: 3}
       propertyPath: detectedRange
       value: 15
       objectReference: {fileID: 0}

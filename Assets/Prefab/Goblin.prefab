@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2008518737774560502}
-  runSpeed: 40
+  runSpeed: 60
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907b00509c4429640aad1f0db4f8fd16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 1500
+  m_JumpForce: 3000
   m_MovementSmoothing: 0.05
   m_AirControl: 0
   m_WhatIsGround:

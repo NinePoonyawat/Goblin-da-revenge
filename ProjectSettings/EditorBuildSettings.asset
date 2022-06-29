@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ChapterOneMap.unity
     guid: 4360bd3b9666d5a4684c2bfabef6d542
   - enabled: 1
-    path: Assets/Scenes/Chapter1Level1.unity
+    path: Assets/Scenes/Level 1-1.unity
     guid: 81af36a4e9649974bb14e361168654f4
   m_configObjects: {}
