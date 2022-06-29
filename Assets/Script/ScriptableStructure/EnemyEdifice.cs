@@ -45,7 +45,11 @@ public class EnemyEdifice : MonoBehaviour
                 GO.transform.SetParent(enemyRoot);
                 if (memberGroup.enemyWeapon != null)
                 {
-                    GO.transform.Find("EnemyObject").GetComponent<ArmedEnemyController>().changeWeapon(memberGroup.enemyWeapon);
+                    GO.GetComponent<ArmedEnemy>().changeWeapon(memberGroup.enemyWeapon);
+                }
+                if (memberGroup.enemyShield != null)
+                {
+                    GO.GetComponent<ArmedEnemyWithShield>().setShield(memberGroup.enemyShield);
                 }
                 yield return new WaitForSeconds(emitCooldown);
             }
@@ -57,6 +61,7 @@ public class EnemyEdifice : MonoBehaviour
     {
         public GameObject enemyPrefab;
         public GameObject enemyWeapon;
+        public GameObject enemyShield;
         public int enemyCount;
         public bool isBossEnemy;
     }

@@ -507,7 +507,7 @@ MonoBehaviour:
   enemyName: BlackSmith
   enemyNameLabel: {fileID: 722427865475768813}
   stalkSpeed: 1
-  visionDistance: 0
+  visionDistance: 100
   maxHealth: 50
   currentHealth: 0
   sprite: {fileID: 2770179313037964086}

@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour,ITakeDamageable
 
     [Header("Enemy Status")]
     public float stalkSpeed;
-    public float visionDistance;
+    public float visionDistance = 100f;
     [SerializeField] private float maxHealth,currentHealth;
     [SerializeField] private SpriteRenderer sprite;
     private Color defaultColor;
@@ -77,8 +77,10 @@ public class Enemy : MonoBehaviour,ITakeDamageable
 
     protected virtual void updateMoving()
     {
-        float distance = Math.Abs(targetTransform.position.x - objectTransform.position.x);
+        distance = Math.Abs(targetTransform.position.x - objectTransform.position.x);
         
+        Debug.Log(distance > visionDistance);
+
         //TEST | Vision Check
         if (distance > visionDistance) return;
 

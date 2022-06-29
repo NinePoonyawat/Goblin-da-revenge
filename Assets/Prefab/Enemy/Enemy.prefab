@@ -624,7 +624,7 @@ MonoBehaviour:
   enemyName: Villager
   enemyNameLabel: {fileID: 6510061302232076319}
   stalkSpeed: 1
-  visionDistance: 0
+  visionDistance: 100
   maxHealth: 50
   currentHealth: 0
   sprite: {fileID: 8516115012019471044}
