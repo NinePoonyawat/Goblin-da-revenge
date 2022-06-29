@@ -2641,7 +2641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyCount

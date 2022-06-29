@@ -44,23 +44,24 @@ public class LevelWaveLogic : MonoBehaviour
         {
             for (int i = waveObstacle.Count - 1 ; i >= 0 ; i--)
             {
-                GameObject obstacle = waveObstacle[i];
-                if (obstacle == null)
+                try
                 {
-                    waveObstacle.Remove(obstacle);
-                    break;
+                    GameObject obstacle = waveObstacle[i];
+                    IWaveObstacle waveObstacleObject = obstacle.GetComponent<IWaveObstacle>();
+                    if (!waveObstacleObject.getIsWaveStacle())
+                    {
+                        waveObstacle.Remove(obstacle);
+                    }
+                    if (waveObstacleObject.getIsWaveStacle())
+                    {
+                        return;
+                    }
                 }
-                IWaveObstacle waveObstacleObject = obstacle.GetComponent<IWaveObstacle>();
-                if (!waveObstacleObject.getIsWaveStacle())
+                catch (MissingReferenceException)
                 {
-                    waveObstacle.Remove(obstacle);
-                }
-                if (waveObstacleObject.getIsWaveStacle())
-                {
-                    return;
+                    waveObstacle.RemoveAt(i);
                 }
             }
-            Debug.Log("wave is end");
             gameWaveStatus = GameWaveStatus.FLEE;
         }
     }
@@ -75,6 +76,10 @@ public class LevelWaveLogic : MonoBehaviour
         waveNumber += 1;
         waveObstacle = gameWave[waveNumber].allObstacleInWave;
         gameWaveStatus = GameWaveStatus.ONGOING;
+        foreach (var obstacle in waveObstacle)
+        {
+            obstacle.SetActive(true);
+        }
     }
 
     [Serializable]
