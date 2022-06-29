@@ -54,7 +54,7 @@ public class StoneHammerLogic : SlashableWeaponLogic
                 Instantiate(explosionPrefab,startPosition - explodeDistance * i,Quaternion.identity);
                 explode(startPosition - explodeDistance * i);
             }
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(1.5f);
         }
     }
 
