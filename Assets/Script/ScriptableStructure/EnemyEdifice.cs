@@ -12,7 +12,7 @@ public class EnemyEdifice : MonoBehaviour,IWaveObstacle
     private MemberGroup[] peopleInHouse;
 
     [SerializeField]
-    private float rangeToDetected;
+    private float rangeToDetected = 3f;
 
     [SerializeField]
     private float emitCooldown = 2f;
