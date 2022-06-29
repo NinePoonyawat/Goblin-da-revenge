@@ -78,8 +78,6 @@ public class Enemy : MonoBehaviour,ITakeDamageable
     protected virtual void updateMoving()
     {
         distance = Math.Abs(targetTransform.position.x - objectTransform.position.x);
-        
-        Debug.Log(distance > visionDistance);
 
         //TEST | Vision Check
         if (distance > visionDistance) return;

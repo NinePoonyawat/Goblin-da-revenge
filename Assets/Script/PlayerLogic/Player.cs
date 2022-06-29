@@ -21,8 +21,12 @@ public class Player : MonoBehaviour,ITakeDamageable
 
     [Header("Weapon Management")]
     [SerializeField]
-    public GameObject weaponPrefab;
+    public WeaponInventory weaponInventory;
     private bool isWeaponInHand;
+
+    private float changeWeaponCooldownCount;
+    private float changeWeaponCooldown = 10f;
+    private bool isOnChangeWeaponCooldown = false;
 
     [SerializeField]
     public Transform handPos;
@@ -52,12 +56,7 @@ public class Player : MonoBehaviour,ITakeDamageable
 
         entityToAttack = "Enemy";
         mainTransform = gameObject.transform;
-        if (weaponPrefab == null)
-        {
-            isWeaponInHand = false;
-            return;
-        }
-        setWeapon(weaponPrefab);
+        setWeapon(weaponInventory.getWeapon1());
     }
 
     // Update is called once per frame
@@ -71,10 +70,33 @@ public class Player : MonoBehaviour,ITakeDamageable
         if (Input.GetButtonDown("NormalAttack") && !isOnAttackCooldown)
         {
             weaponLogic.attack();
-            attackCooldownCount = weaponPrefab.GetComponent<WeaponLogic>().getCooldownTime();
+            attackCooldownCount = GO.GetComponent<WeaponLogic>().getCooldownTime();
             isOnAttackCooldown = true;
         }
-
+        if (Input.GetButtonDown("SelectWeapon1") && !isOnChangeWeaponCooldown)
+        {
+            if (weaponInventory.getWeapon1() == null)
+                return;
+            changeWeapon(weaponInventory.getWeapon1());
+            isOnChangeWeaponCooldown = true;
+            changeWeaponCooldownCount = changeWeaponCooldown;
+        }
+        if (Input.GetButtonDown("SelectWeapon2") && !isOnChangeWeaponCooldown)
+        {
+            if (weaponInventory.getWeapon2() == null)
+                return;
+            changeWeapon(weaponInventory.getWeapon2());
+            isOnChangeWeaponCooldown = true;
+            changeWeaponCooldownCount = changeWeaponCooldown;
+        }
+        if (Input.GetButtonDown("SelectWeapon3") && !isOnChangeWeaponCooldown)
+        {
+            if (weaponInventory.getWeapon3() == null)
+                return;
+            changeWeapon(weaponInventory.getWeapon3());
+            isOnChangeWeaponCooldown = true;
+            changeWeaponCooldownCount = changeWeaponCooldown;
+        }
     }
 
     void FixedUpdate()
@@ -82,6 +104,12 @@ public class Player : MonoBehaviour,ITakeDamageable
         controller.Move(horizontalMove * Time.deltaTime,false,jump);
         jump = false;
 
+        attackFixedUpdate();
+        changeWeaponFixedUpdate();
+    }
+
+    void attackFixedUpdate()
+    {
         if (!isWeaponInHand)
             return;
         if (attackCooldownCount > 0)
@@ -91,6 +119,20 @@ public class Player : MonoBehaviour,ITakeDamageable
         if (attackCooldownCount <= 0 && isOnAttackCooldown)
         {
             isOnAttackCooldown = false;
+        }
+    }
+
+    void changeWeaponFixedUpdate()
+    {
+        if (!isOnChangeWeaponCooldown)
+            return;
+        if (changeWeaponCooldownCount > 0)
+        {
+            changeWeaponCooldownCount -= Time.deltaTime;
+        }
+        if (changeWeaponCooldownCount <= 0)
+        {
+            isOnChangeWeaponCooldown = false;
         }
     }
 
@@ -139,11 +181,8 @@ public class Player : MonoBehaviour,ITakeDamageable
         }
         // weaponInHand = newWeaponInHand;
         isWeaponInHand = true;
-        // gameObject.GetComponent<SpriteRenderer>().sprite = newWeaponInHand.image;
-        // gameObject.transform.localScale = new Vector3(newWeaponInHand.size, newWeaponInHand.size, 1);
-        // gameObject.transform.localPosition = newWeaponInHand.pickPosition;
 
-        GameObject GO = Instantiate(weaponPrefab) as GameObject;
+        GO = Instantiate(weaponPrefab) as GameObject;
         GO.transform.SetParent(handPos);
         Vector3 distanceToMove = GO.transform.Find("HandlePos").position - handPos.position;
         GO.transform.position -= distanceToMove;
@@ -151,11 +190,6 @@ public class Player : MonoBehaviour,ITakeDamageable
 
         GO.transform.rotation = mainTransform.rotation;
         GO.GetComponent<WeaponLogic>().entityToAttack = "Enemy";
-        // if (gameObject.transform.parent.parent.gameObject.GetComponent<SpriteRenderer>().flipX)
-        // {
-        //     Debug.Log("do this line");
-        //     GO.transform.Rotate(0, 180, 0);
-        // }
 
         weaponLogic = GO.GetComponent<WeaponLogic>();
     }
@@ -170,7 +204,6 @@ public class Player : MonoBehaviour,ITakeDamageable
         {
         }
         isWeaponInHand = false;
-        weaponPrefab = null;
         weaponLogic = null;
     }
 
