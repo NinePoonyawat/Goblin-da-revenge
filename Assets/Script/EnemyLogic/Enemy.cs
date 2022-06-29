@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using TMPro;
 
-public class Enemy : MonoBehaviour,ITakeDamageable
+public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
 {
     [Header("Enemy Data")]
     [SerializeField] private string enemyName;
@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour,ITakeDamageable
     public bool isMoving = false;
     public bool isForward = false;
     protected bool isRotatable = true;
+    protected bool isWaveObstacle = true;
 
     protected EnemyBehavior enemyBehavior = EnemyBehavior.FaceTarget;
     protected float recommendedRange = 0.1f;
@@ -174,7 +175,13 @@ public class Enemy : MonoBehaviour,ITakeDamageable
 
     public virtual void die()
     {
+        isWaveObstacle = false;
         Destroy(gameObject);
+    }
+
+    public bool getIsWaveStacle()
+    {
+        return isWaveObstacle;
     }
 
     public IEnumerator flashRed()

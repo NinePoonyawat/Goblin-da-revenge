@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class EnemyEdifice : MonoBehaviour
+public class EnemyEdifice : MonoBehaviour,IWaveObstacle
 {
     [SerializeField]
     private Transform whereIsDoor;
@@ -19,6 +19,8 @@ public class EnemyEdifice : MonoBehaviour
 
     private Transform goblinToDetected;
     private Transform enemyRoot;
+    private bool isWaveObstacle = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,9 +53,17 @@ public class EnemyEdifice : MonoBehaviour
                 {
                     GO.GetComponent<ArmedEnemyWithShield>().setShield(memberGroup.enemyShield);
                 }
+                GameObject.Find("GameLogic").GetComponent<LevelWaveLogic>().addNewWaveObstacle(GO);
                 yield return new WaitForSeconds(emitCooldown);
             }
         }
+        Debug.Log("end");
+        isWaveObstacle = false;
+    }
+
+    public bool getIsWaveStacle()
+    {
+        return isWaveObstacle;
     }
 
     [Serializable]

@@ -742,6 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191984756}
   - component: {fileID: 191984757}
+  - component: {fileID: 191984758}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -779,6 +780,22 @@ MonoBehaviour:
   bossToEliminated: 1
   winMenu: {fileID: 1364863566}
   lossMenu: {fileID: 142990501}
+--- !u!114 &191984758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191984755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6befb9cb09f934e4dbcc5861f8307d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameWave:
+  - allObstacleInWave:
+    - {fileID: 1633055540}
+  gameWaveStatus: 0
 --- !u!1 &217693593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,7 +2641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyCount
@@ -2779,6 +2796,11 @@ PrefabInstance:
 --- !u!4 &1633055539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4211350376464045432, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
+  m_PrefabInstance: {fileID: 1633055538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1633055540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7673858346747292543, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
   m_PrefabInstance: {fileID: 1633055538}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657357603
