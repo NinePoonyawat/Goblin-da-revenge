@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class Enemy : MonoBehaviour,ITakeDamageable
 {
     [Header("Enemy Data")]
     [SerializeField] private string enemyName;
+    [SerializeField] private TMP_Text enemyNameLabel;
 
     [Header("Enemy Status")]
     public float stalkSpeed;
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour,ITakeDamageable
         enemyBehavior =EnemyBehavior.FaceTarget;
         targetTransform = targetToDetected.transform;
         mainTransform = this.transform;
+        enemyNameLabel.text = enemyName;
 
         if (!isFacingRight && targetTransform.position.x > objectTransform.position.x)
         {

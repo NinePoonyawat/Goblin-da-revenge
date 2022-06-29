@@ -504,7 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8c8c897d5435b47bde07f0d2a5afca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Villager
+  enemyName: BlackSmith
+  enemyNameLabel: {fileID: 722427865475768813}
   stalkSpeed: 1
   visionDistance: 0
   maxHealth: 50

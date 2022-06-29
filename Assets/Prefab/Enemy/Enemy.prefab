@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Villager
+  enemyNameLabel: {fileID: 6510061302232076319}
   stalkSpeed: 1
   visionDistance: 0
   maxHealth: 50
