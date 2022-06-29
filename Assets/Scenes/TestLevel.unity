@@ -1290,6 +1290,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 630287596}
+    - target: {fileID: 2008518737774560496, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1845819267, guid: 2847d8c7fea513848b04b1f6b93b766d, type: 3}
     - target: {fileID: 2008518737774560499, guid: 83d84a3d535861e4d91adbde8ee19fd6, type: 3}
       propertyPath: m_RootOrder
       value: 2
