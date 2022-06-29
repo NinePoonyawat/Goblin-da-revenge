@@ -885,6 +885,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3227395249135143828, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227395249135143828, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -904,6 +908,50 @@ PrefabInstance:
       propertyPath: weaponPrefab
       value: 
       objectReference: {fileID: 6237866447119828, guid: 953f9402eb05d0e4e92cb2d7bc1d02b1, type: 3}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.ctime1
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.key0.r
+      value: 0.6792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.key1.g
+      value: 0.6383668
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148467875626164944, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: gradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012562312439699230, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012562312439699230, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012562312439699230, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: m_Color.r
+      value: 0.38679248
+      objectReference: {fileID: 0}
     - target: {fileID: 8226430794859198327, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -918,6 +966,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8226430794859198327, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226430794859198327, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8226430794859198327, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
