@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2008518737774560502}
   - component: {fileID: 2008518737774560503}
   - component: {fileID: 469860522899768081}
+  - component: {fileID: 1893575257}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Player
@@ -34,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 2008518737774560510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.778, y: 0.896, z: 0}
-  m_LocalScale: {x: 0.090365924, y: 0.086637594, z: 0.1528}
+  m_LocalScale: {x: 0.4588, y: 0.47255, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2008518738070415353}
@@ -84,12 +85,12 @@ SpriteRenderer:
   m_SortingLayerID: -1277184013
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1eddeeab0cb313943a3b9afc6fa17489, type: 3}
+  m_Sprite: {fileID: 1974049630, guid: 3ba3f1ddfe6c13a4ea7a304cf1eb04b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 14.79, y: 11.09}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -107,7 +108,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.5192032
+  m_Mass: 2.8877783
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 10
@@ -129,8 +130,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44221425, y: -0.008303879}
-  m_Size: {x: 11.298991, y: 19.702879}
+  m_Offset: {x: 0.2522955, y: -0.040481463}
+  m_Size: {x: 3.043166, y: 5.0109706}
   m_Direction: 0
 --- !u!95 &2008518737774560491
 Animator:
@@ -171,8 +172,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   sprite: {fileID: 2008518737774560496}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  allComponent: {fileID: 469860522899768081}
-  weaponPrefab: {fileID: 0}
+  weaponInventory: {fileID: 11400000, guid: 4ec35d506a26edd4dab59d4602c56ac6, type: 2}
   handPos: {fileID: 2008518738786110798}
   entityToAttack: 
 --- !u!114 &396659784867990807
@@ -245,6 +245,21 @@ MonoBehaviour:
   characterTransform: {fileID: 2008518737774560499}
   characterController2D: {fileID: 2008518737774560502}
   playerMovement: {fileID: 2008518737774560503}
+--- !u!114 &1893575257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008518737774560510}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d17e9709f7b8c9449340f1777c9cc9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 9151871832677380449, guid: 7d907d789fae41b459766ed9c5388278, type: 3}
+  handPos: {fileID: 2008518738786110798}
+  entityToAttack: 
 --- !u!1 &2008518738070415238
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008518738070415238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -9.9, z: 0}
+  m_LocalPosition: {x: 0.16, y: -2.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -300,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008518738453959937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 9.9, z: 0}
+  m_LocalPosition: {x: -0.03, y: 2.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -332,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008518738786110799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.8000019, y: -5.9999986, z: 0}
+  m_LocalPosition: {x: -1.12, y: -1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
