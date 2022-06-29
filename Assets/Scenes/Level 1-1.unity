@@ -613,7 +613,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyPrefab
       value: 
-      objectReference: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyWeapon
       value: 
@@ -1017,6 +1017,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563307158548681683, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7563307158548681692, guid: 10773184783ccf04894229e563f72d99, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1238,7 +1242,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyPrefab
       value: 
-      objectReference: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyWeapon
       value: 
@@ -2945,7 +2949,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyPrefab
       value: 
-      objectReference: {fileID: 7563307158548681681, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyWeapon
       value: 

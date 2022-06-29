@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 6332976505059838161}
   - component: {fileID: 4784144339830331664}
   m_Layer: 8
-  m_Name: VillagerWithShield
+  m_Name: SmithWithShield
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +429,7 @@ SpriteRenderer:
   m_SortingLayerID: -1359201141
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd2bb688d6ed6d049880774161ae5e87, type: 3}
+  m_Sprite: {fileID: -231716971, guid: 20ffd44d58d5c3441b820024fe72b5f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   enemyNameLabel: {fileID: 722427865475768813}
   stalkSpeed: 1
   visionDistance: 100
-  maxHealth: 50
+  maxHealth: 60
   currentHealth: 0
   sprite: {fileID: 2770179313037964086}
   healthBar: {fileID: 4728997334040869327}
@@ -695,7 +695,7 @@ SpriteRenderer:
   m_SortingLayerID: -1359201141
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1990958301, guid: 40c3fa46cf62c2d4f935790907ca176d, type: 3}
+  m_Sprite: {fileID: -231716971, guid: 20ffd44d58d5c3441b820024fe72b5f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -716,7 +716,7 @@ Animator:
   m_GameObject: {fileID: 6391031548281862039}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3ad746e98a8846c45a188740f16a914f, type: 2}
+  m_Controller: {fileID: 9100000, guid: bfcc47800ff4b5c438e81c1a11b1d269, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
