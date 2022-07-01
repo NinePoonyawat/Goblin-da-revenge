@@ -15,6 +15,8 @@ public class Bullet : MonoBehaviour
 
     private bool isTriggered = false;
 
+    private HashSet<DamageType> normalDamageType = new HashSet<DamageType>() {DamageType.Normal};
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +28,10 @@ public class Bullet : MonoBehaviour
     {
         if(entity.CompareTag(entityToAttack) && !isTriggered)
         {
-            Debug.Log("attack!");
             ITakeDamageable attackedEntity = entity.GetComponent<ITakeDamageable>();
             if (attackedEntity != null)
             {
-                attackedEntity.takeDamage(damage,DamageType.Normal);
+                attackedEntity.takeDamage(damage,normalDamageType);
                 isTriggered = true;
                 Destroy(gameObject);
             }

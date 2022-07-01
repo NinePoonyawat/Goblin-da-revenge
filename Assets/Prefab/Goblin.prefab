@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2008518737774560488}
   - component: {fileID: 2008518737774560491}
   - component: {fileID: 4669081883076726391}
-  - component: {fileID: 396659784867990807}
   - component: {fileID: 2008518737774560502}
   - component: {fileID: 2008518737774560503}
   - component: {fileID: 469860522899768081}
@@ -175,24 +174,6 @@ MonoBehaviour:
   weaponInventory: {fileID: 11400000, guid: 4ec35d506a26edd4dab59d4602c56ac6, type: 2}
   handPos: {fileID: 2008518738786110798}
   entityToAttack: 
---- !u!114 &396659784867990807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008518737774560510}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95306179675b7dd42937caf41f456762, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  sprite: {fileID: 2008518737774560496}
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  allComponent: {fileID: 469860522899768081}
-  healthBar: {fileID: 0}
 --- !u!114 &2008518737774560502
 MonoBehaviour:
   m_ObjectHideFlags: 0

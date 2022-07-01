@@ -7,6 +7,7 @@ public class FootHurtedStatusSO : EntityStatusSO
 {
     [SerializeField]
     private float speed,walkingDamage;
+    private HashSet<DamageType> normalDamageType = new HashSet<DamageType>() {DamageType.Normal};
 
     public override void statusStart(Player character)
     {
@@ -17,7 +18,7 @@ public class FootHurtedStatusSO : EntityStatusSO
     {
         if (character.controller.hasXMove())
         {
-            character.takeDamage(walkingDamage,DamageType.Normal);
+            character.takeDamage(walkingDamage,normalDamageType);
         }
     }
 

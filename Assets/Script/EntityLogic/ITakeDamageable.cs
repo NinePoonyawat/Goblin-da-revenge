@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface ITakeDamageable
 {
-    public void takeDamage(float damage, DamageType damageType);
+    public void takeDamage(float damage,HashSet<DamageType> damageType);
 }
 
 public enum DamageType

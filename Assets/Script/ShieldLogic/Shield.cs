@@ -18,7 +18,7 @@ public class Shield : MonoBehaviour,ITakeDamageable
         isDestroyed = false;    
     }
 
-    public virtual void takeDamage(float damage,DamageType damageType)
+    public virtual void takeDamage(float damage,HashSet<DamageType> damageType)
     {
         currentHealth -= damage;
 
