@@ -159,7 +159,7 @@ public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
         distance = Vector3.Distance(targetTransform.position, transform.position);
     }
 
-    public virtual void takeDamage(float damage,DamageType damageType)
+    public virtual void takeDamage(float damage,HashSet<DamageType> damageType)
     {
         currentHealth -= damage;
 

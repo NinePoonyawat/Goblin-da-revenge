@@ -146,7 +146,7 @@ public class Player : MonoBehaviour,ITakeDamageable
         this.runSpeed = defaultRunSpeed;
     }
 
-    public virtual void takeDamage(float damage,DamageType damageType)
+    public virtual void takeDamage(float damage,HashSet<DamageType> damageType)
     {
         currentHealth -= damage;
 

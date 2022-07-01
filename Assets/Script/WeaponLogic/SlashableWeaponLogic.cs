@@ -12,6 +12,8 @@ public class SlashableWeaponLogic : WeaponLogic
     public float attackRange;
     public LayerMask hitLayers;
 
+    private HashSet<DamageType> normalDamageType = new HashSet<DamageType>() {DamageType.Normal};
+
     void Awake()
     {
         hitLayers = LayerMask.GetMask("Entity") | LayerMask.GetMask("Shield");
@@ -31,7 +33,7 @@ public class SlashableWeaponLogic : WeaponLogic
                 ITakeDamageable attackedEntity = entity.GetComponent<ITakeDamageable>();
                 if (attackedEntity != null)
                 {
-                    attackedEntity.takeDamage(damage,DamageType.Normal);
+                    attackedEntity.takeDamage(damage,normalDamageType);
                 }
             }
         }

@@ -11,6 +11,8 @@ public class StoneHammerLogic : SlashableWeaponLogic
     [SerializeField]
     protected Vector3 explodeDistance;
 
+    private HashSet<DamageType> normalDamageType = new HashSet<DamageType>() {DamageType.Normal};
+
     protected void Awake()
     {
         hitLayers = LayerMask.GetMask("Entity") | LayerMask.GetMask("Shield");
@@ -31,7 +33,7 @@ public class StoneHammerLogic : SlashableWeaponLogic
                 ITakeDamageable attackedEntity = entity.GetComponent<ITakeDamageable>();
                 if (attackedEntity != null)
                 {
-                    attackedEntity.takeDamage(damage,DamageType.Normal);
+                    attackedEntity.takeDamage(damage,normalDamageType);
                 }
             }
         }
@@ -69,7 +71,7 @@ public class StoneHammerLogic : SlashableWeaponLogic
                 ITakeDamageable attackedEntity = entity.GetComponent<ITakeDamageable>();
                 if (attackedEntity != null)
                 {
-                    attackedEntity.takeDamage(explosionDamage,DamageType.Normal);
+                    attackedEntity.takeDamage(explosionDamage,normalDamageType);
                 }
             }
         }

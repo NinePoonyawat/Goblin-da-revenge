@@ -38,7 +38,7 @@ public class ArmedEnemyWithShield : ArmedEnemy
         }
     }
 
-    public override void takeDamage(float damage,DamageType damageType)
+    public override void takeDamage(float damage,HashSet<DamageType> damageType)
     {
         if (!isShieldExist)
         {
@@ -64,6 +64,11 @@ public class ArmedEnemyWithShield : ArmedEnemy
         {
             return;
         }
+        if (shieldGO != null)
+        {
+            Destroy(shieldGO);
+        }
+        Debug.Log("do this2");
         shieldPrefab = prefab;
 
         shieldGO = Instantiate(prefab) as GameObject;

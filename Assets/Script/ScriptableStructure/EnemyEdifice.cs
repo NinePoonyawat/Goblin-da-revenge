@@ -51,6 +51,7 @@ public class EnemyEdifice : MonoBehaviour,IWaveObstacle
                 }
                 if (memberGroup.enemyShield != null)
                 {
+                    Debug.Log("do this1");
                     GO.GetComponent<ArmedEnemyWithShield>().setShield(memberGroup.enemyShield);
                 }
                 GameObject.Find("GameLogic").GetComponent<LevelWaveLogic>().addNewWaveObstacle(GO);
