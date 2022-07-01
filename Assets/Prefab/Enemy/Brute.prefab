@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.49
       objectReference: {fileID: 0}
+    - target: {fileID: 6194756550867797164, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1595561847
+      objectReference: {fileID: 0}
     - target: {fileID: 6773492315056578937, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1

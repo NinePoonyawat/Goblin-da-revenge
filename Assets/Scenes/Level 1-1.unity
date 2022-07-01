@@ -605,7 +605,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyPrefab
       value: 
-      objectReference: {fileID: 9084657536468676680, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 7563307158548681681, guid: 3f878a3cf7caf03489841ed9a5ca6224, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyWeapon
       value: 
@@ -613,7 +613,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyPrefab
       value: 
-      objectReference: {fileID: 9084657536468676680, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyWeapon
       value: 
@@ -902,8 +902,6 @@ MonoBehaviour:
   gameWave:
   - allObstacleInWave:
     - {fileID: 1633055540}
-    - {fileID: 0}
-    - {fileID: 0}
   - allObstacleInWave:
     - {fileID: 1305357733}
   - allObstacleInWave:
@@ -1272,7 +1270,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyPrefab
       value: 
-      objectReference: {fileID: 9084657536468676680, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 7563307158548681681, guid: 3f878a3cf7caf03489841ed9a5ca6224, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyWeapon
       value: 
@@ -1280,7 +1278,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyPrefab
       value: 
-      objectReference: {fileID: 9084657536468676680, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[1].enemyWeapon
       value: 
@@ -3200,7 +3198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 129081857}
-  parallaxEffect: 0.7
+  parallaxEffect: 0.6
 --- !u!212 &1493518548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3451,7 +3449,7 @@ PrefabInstance:
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyPrefab
       value: 
-      objectReference: {fileID: 9084657536468676680, guid: 10773184783ccf04894229e563f72d99, type: 3}
+      objectReference: {fileID: 9084657536468676680, guid: e6e3b1d062068864382d469a087aee7b, type: 3}
     - target: {fileID: 5840304384885954606, guid: eb471b83cd640964ab03a6be59bed2d6, type: 3}
       propertyPath: peopleInHouse.Array.data[0].enemyWeapon
       value: 
@@ -3954,7 +3952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336562550732210615, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3336562550732210615, guid: 85be86e161ec52b46bb8a81e6ffc5f66, type: 3}
       propertyPath: m_LocalPosition.x
