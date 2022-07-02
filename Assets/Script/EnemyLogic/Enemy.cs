@@ -37,6 +37,17 @@ public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
     protected EnemyBehavior enemyBehavior = EnemyBehavior.FaceTarget;
     protected float recommendedRange = 0.1f;
 
+    [Header("UI")]
+    [SerializeField]
+    protected GameObject attackAlert;
+    protected bool isOnAlertCooldown = false;
+
+    public float alertCooldown = .5f;
+    protected float alertCooldownCount = 0;
+
+    protected bool isAttackable = true;
+    protected bool hasAttack = false;
+
     protected string entityToAttack;
 
     protected virtual void Start()
@@ -82,6 +93,8 @@ public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
 
         //TEST | Vision Check
         if (distance > visionDistance) return;
+
+        if (!isMoving) return;
 
         if (enemyBehavior == EnemyBehavior.FaceTarget)
         {
@@ -161,6 +174,14 @@ public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
 
     public virtual void takeDamage(float damage,HashSet<DamageType> damageType)
     {
+        if (isOnAlertCooldown)
+        {
+            Stunt stunt = gameObject.AddComponent<Stunt>();
+            stunt.perform(10f);
+            attackAlert.SetActive(false);
+            isOnAlertCooldown = false;
+            alertCooldownCount = 0;
+        }
         currentHealth -= damage;
 
         if (currentHealth <= 0)
@@ -182,6 +203,21 @@ public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
     public bool getIsWaveStacle()
     {
         return isWaveObstacle;
+    }
+
+    public void setIsMoving(bool isMoving)
+    {
+        this.isMoving = isMoving;
+    }
+
+    public void setIsRotatable(bool isRotatable)
+    {
+        this.isRotatable = isRotatable;
+    }
+
+    public void setIsAttackable(bool isAttackable)
+    {
+        this.isAttackable = isAttackable;
     }
 
     public IEnumerator flashRed()

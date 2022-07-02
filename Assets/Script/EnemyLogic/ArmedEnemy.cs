@@ -19,16 +19,6 @@ public class ArmedEnemy : Enemy
     protected float attackCooldownCount = .0f;
     protected bool isOnAttackCooldown = false;
 
-    [Header("UI")]
-    [SerializeField]
-    protected GameObject attackAlert;
-    protected bool isOnAlertCooldown = false;
-
-    public float alertCooldown = .5f;
-    private float alertCooldownCount = 0;
-
-    private bool hasAttack = false;
-
     protected override void Start()
     {
         base.Start();
@@ -51,14 +41,14 @@ public class ArmedEnemy : Enemy
             return;
         float range = Mathf.Abs(targetTransform.position.x - weaponTransform.position.x);
         bool isOnAttackRange = range <= weaponPrefab.GetComponent<WeaponLogic>().getDetectedRange();
-        if (isOnAttackRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack)
+        if (isOnAttackRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack && isAttackable)
             {
                 attackAlert.SetActive(true);
                 alertCooldownCount = alertCooldown;
                 isOnAlertCooldown = true;
                 isRotatable = false;
             }
-        if (hasAttack)
+        if (hasAttack && isAttackable)
         {
             weaponLogic.attack();
             attackCooldownCount = weaponPrefab.GetComponent<WeaponLogic>().getCooldownTime();
