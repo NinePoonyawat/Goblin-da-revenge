@@ -24,5 +24,6 @@ public class Stunt : MonoBehaviour
         stuntedEnemy.setIsMoving(true);
         stuntedEnemy.setIsRotatable(true);
         stuntedEnemy.setIsAttackable(true);
+        Destroy(this);
     }
 }
