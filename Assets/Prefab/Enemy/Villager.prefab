@@ -634,10 +634,10 @@ MonoBehaviour:
   isFacingRight: 1
   isMoving: 0
   isForward: 0
-  weaponPrefab: {fileID: 0}
-  handPos: {fileID: 9084657536342997632}
   attackAlert: {fileID: 9084657537504218663}
   alertCooldown: 0.5
+  weaponPrefab: {fileID: 7052429830266300051, guid: 26a385dbd30eb0248ac81691d07bb1ea, type: 3}
+  handPos: {fileID: 9084657536342997632}
 --- !u!1 &9084657536592060099
 GameObject:
   m_ObjectHideFlags: 0
