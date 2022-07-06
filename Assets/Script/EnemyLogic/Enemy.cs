@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using TMPro;
 
+// This script is root of enemy logic.
 public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
 {
     [Header("Enemy Data")]
@@ -174,14 +175,6 @@ public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
 
     public virtual void takeDamage(float damage,HashSet<DamageType> damageType)
     {
-        if (isOnAlertCooldown)
-        {
-            Stunt stunt = gameObject.AddComponent<Stunt>();
-            stunt.perform(10f);
-            attackAlert.SetActive(false);
-            isOnAlertCooldown = false;
-            alertCooldownCount = 0;
-        }
         currentHealth -= damage;
 
         if (currentHealth <= 0)
