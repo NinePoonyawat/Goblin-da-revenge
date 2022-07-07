@@ -50,11 +50,14 @@ public class Enemy : MonoBehaviour,ITakeDamageable,IWaveObstacle
     protected bool hasAttack = false;
 
     protected string entityToAttack;
+    protected Collider2D entityCollider;
 
     protected virtual void Start()
     {
         entityToAttack = "Player";
         targetToDetected = GameObject.Find("PlayingGoblin");
+        entityCollider = targetToDetected.GetComponent<Collider2D>();
+
         enemyBehavior =EnemyBehavior.FaceTarget;
         targetTransform = targetToDetected.transform;
         mainTransform = this.transform;

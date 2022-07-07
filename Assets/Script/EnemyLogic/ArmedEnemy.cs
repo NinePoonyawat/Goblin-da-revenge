@@ -39,7 +39,7 @@ public class ArmedEnemy : Enemy
             return;
         if (targetToDetected == null)
             return;
-        float range = Mathf.Abs(targetTransform.position.x - weaponTransform.position.x);
+        float range = Vector2.Distance(entityCollider.ClosestPoint(weaponTransform.position),weaponTransform.position);
         bool isOnAttackRange = range <= weaponPrefab.GetComponent<WeaponLogic>().getDetectedRange();
         if (isOnAttackRange && !isOnAlertCooldown && !isOnAttackCooldown && !hasAttack && isAttackable)
             {
