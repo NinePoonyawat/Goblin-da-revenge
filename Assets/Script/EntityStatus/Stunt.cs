@@ -9,6 +9,7 @@ public class Stunt : MonoBehaviour
     public void perform(float stuntTime)
     {
         stuntedEnemy = gameObject.GetComponent<Enemy>();
+        stuntedEnemy.transform.Find("StunIcon").gameObject.SetActive(true);
 
         StartCoroutine(stunt(stuntTime));
     }
@@ -24,6 +25,7 @@ public class Stunt : MonoBehaviour
         stuntedEnemy.setIsMoving(true);
         stuntedEnemy.setIsRotatable(true);
         stuntedEnemy.setIsAttackable(true);
+        stuntedEnemy.transform.Find("StunIcon").gameObject.SetActive(false);
         Destroy(this);
     }
 }

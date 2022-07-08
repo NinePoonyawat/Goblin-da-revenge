@@ -3,7 +3,8 @@ guid: 9e15e1b25862678439a5ebefa628e58f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - stunIconPrefab: {fileID: 3763297896737927369, guid: becdb46d96bb3cb4cb31a9063ddb4493, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
